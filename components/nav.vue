@@ -88,7 +88,7 @@ export default {
       document.addEventListener('scroll', function() {
         /* Apply classes for slide in bar */
         scrollpos = window.scrollY
-        header.classList.toggle('sticky', scrollpos > 10)
+        header.classList.toggle('nav-sticky', scrollpos > 10)
       })
     },
     toggleNav() {
@@ -130,7 +130,7 @@ export default {
 </script>
 
 <style scoped>
-#header.sticky {
+#header.nav-sticky {
   @apply bg-white shadow;
 
   & #nav-content {
@@ -146,7 +146,7 @@ export default {
   }
 }
 
-#header:not(.sticky) {
+#header:not(.nav-sticky) {
   & #nav-action {
     @apply bg-white text-gray-800;
   }
