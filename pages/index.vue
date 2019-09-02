@@ -60,14 +60,13 @@
 </template>
 
 <script>
-import Page from '@/components/page'
-import BlockHome1 from '@/components/blocks/block-home-1'
-import BlockHome2 from '@/components/blocks/block-home-2'
-import BlockPricing from '@/components/blocks/block-pricing'
+import BlockHome1 from '~/components/blocks/BlockHome1'
+import BlockHome2 from '~/components/blocks/BlockHome2'
+import BlockPricing from '~/components/blocks/BlockPricing'
 
 export default {
+  name: 'Home',
   components: {
-    Page,
     BlockHome1,
     BlockHome2,
     BlockPricing

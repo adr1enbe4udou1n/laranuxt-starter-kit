@@ -25,8 +25,8 @@
 </template>
 
 <script>
-import HeaderWaves from '@/components/header-waves'
-import FooterWaves from '@/components/footer-waves'
+import HeaderWaves from '~/components/HeaderWaves'
+import FooterWaves from '~/components/FooterWaves'
 
 export default {
   components: {

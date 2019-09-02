@@ -50,8 +50,8 @@
 </template>
 
 <script>
-import Logo from '@/components/logo'
-import Toggle from '@/components/toggle'
+import Logo from '~/components/Logo'
+import Toggle from '~/components/Toggle'
 
 export default {
   components: {

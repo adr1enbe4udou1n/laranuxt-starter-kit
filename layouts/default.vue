@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import AppNav from '@/components/nav'
-import AppFooter from '@/components/footer'
+import AppNav from '~/components/Nav'
+import AppFooter from '~/components/Footer'
 
 export default {
   components: {
