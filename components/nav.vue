@@ -1,5 +1,9 @@
 <template>
-  <nav id="header" class="fixed w-full z-30 top-0 text-white">
+  <nav
+    id="header"
+    class="fixed w-full z-30 top-0 text-white"
+    :class="{ 'nav-sticky': scrollY > 10 }"
+  >
     <div
       class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2"
     >
@@ -18,6 +22,7 @@
         <button
           id="nav-toggle"
           class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none"
+          @click="openedNav = !openedNav"
         >
           <toggle></toggle>
         </button>
@@ -25,7 +30,8 @@
 
       <div
         id="nav-content"
-        class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
+        class="w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
+        :class="{ hidden: !openedNav }"
       >
         <ul class="list-reset lg:flex justify-end flex-1 items-center">
           <li v-for="(link, index) in links" :key="index" class="mr-3">
@@ -60,6 +66,8 @@ export default {
   },
   data() {
     return {
+      openedNav: false,
+      scrollY: 0,
       links: [
         {
           title: 'Official Blog',
@@ -76,54 +84,15 @@ export default {
       ]
     }
   },
-  mounted() {
-    this.stickyNav()
-    this.toggleNav()
+  beforeMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
-    stickyNav() {
-      let scrollpos = window.scrollY
-      const header = document.getElementById('header')
-
-      document.addEventListener('scroll', function() {
-        /* Apply classes for slide in bar */
-        scrollpos = window.scrollY
-        header.classList.toggle('nav-sticky', scrollpos > 10)
-      })
-    },
-    toggleNav() {
-      const navMenuDiv = document.getElementById('nav-content')
-      const navMenu = document.getElementById('nav-toggle')
-
-      document.onclick = check
-      function check(e) {
-        const target = (e && e.target) || (event && event.srcElement)
-
-        // Nav Menu
-        if (!checkParent(target, navMenuDiv)) {
-          // click NOT on the menu
-          if (checkParent(target, navMenu)) {
-            // click on the link
-            if (navMenuDiv.classList.contains('hidden')) {
-              navMenuDiv.classList.remove('hidden')
-            } else {
-              navMenuDiv.classList.add('hidden')
-            }
-          } else {
-            // click both outside link and outside menu, hide menu
-            navMenuDiv.classList.add('hidden')
-          }
-        }
-      }
-      function checkParent(t, elm) {
-        while (t.parentNode) {
-          if (t === elm) {
-            return true
-          }
-          t = t.parentNode
-        }
-        return false
-      }
+    handleScroll() {
+      this.scrollY = window.scrollY
     }
   }
 }
