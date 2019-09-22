@@ -50,13 +50,23 @@ export default {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    [
+      '@nuxtjs/recaptcha',
+      {
+        hideBadge: true,
+        siteKey: process.env.GOOGLE_RECAPTCHA_SITE_KEY,
+        version: 3
+      }
+    ]
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    baseUrl: process.env.API_URL
+  },
   /*
    ** Build configuration
    */
