@@ -30,46 +30,21 @@
       </div>
     </div>
 
-    <block-home-1></block-home-1>
-    <block-home-2></block-home-2>
-    <block-pricing></block-pricing>
-
-    <div slot="footer">
-      <h1
-        class="w-full my-2 text-5xl font-bold leading-tight text-center text-white"
-      >
-        Call to Action
-      </h1>
-      <div class="w-full mb-4">
-        <div
-          class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"
-        ></div>
-      </div>
-
-      <h3 class="my-4 text-3xl leading-tight">
-        Main Hero Message to sell yourself!
-      </h3>
-
-      <button
-        class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg"
-      >
-        Action!
-      </button>
-    </div>
+    <PostCard></PostCard>
   </page>
 </template>
 
 <script>
-import BlockHome1 from '~/components/blocks/BlockHome1'
-import BlockHome2 from '~/components/blocks/BlockHome2'
-import BlockPricing from '~/components/blocks/BlockPricing'
+import PostCard from '~/components/PostCard'
 
 export default {
-  name: 'HomePage',
+  name: 'BlogPage',
   components: {
-    BlockHome1,
-    BlockHome2,
-    BlockPricing
+    PostCard
+  },
+  async asyncData({ app }) {
+    const { data } = await app.$cmsApi.getPosts({ page: 1, perPage: 30 })
+    return { posts: data }
   }
 }
 </script>

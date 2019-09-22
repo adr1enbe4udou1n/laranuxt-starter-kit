@@ -9,7 +9,8 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "openapi": "openapi-generator generate -i http://laravel-api.localhost/docs/api-docs.json -g typescript-fetch -o openapi --additional-properties=typescriptThreePlus=true"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint"
@@ -20,16 +21,19 @@
     }
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/pwa": "^3.0.0-beta.19",
     "@nuxtjs/recaptcha": "^0.5.3",
+    "form-data": "^2.5.1",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
+    "@nuxt/typescript-build": "^0.2.9",
     "@nuxtjs/eslint-config": "^1.0.1",
     "@nuxtjs/eslint-module": "^1.1.0",
     "@nuxtjs/router": "^1.5.0",
     "@nuxtjs/tailwindcss": "^1.0.0",
+    "@openapitools/openapi-generator-cli": "^0.0.19-4.1.2",
     "babel-eslint": "^10.0.1",
     "eslint": "^6.4.0",
     "eslint-config-prettier": "^6.3.0",

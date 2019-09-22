@@ -18,7 +18,7 @@
                 ],
                 "summary": "Liste des enums",
                 "description": "Liste des enums",
-                "operationId": "App\\Api\\Controllers\\EnumController::index",
+                "operationId": "getEnums",
                 "responses": {
                     "200": {
                         "description": "successful operation"
@@ -33,17 +33,22 @@
                 ],
                 "summary": "Pages",
                 "description": "Pages",
-                "operationId": "App\\Api\\Controllers\\PageController::index",
+                "operationId": "getPages",
                 "responses": {
                     "200": {
                         "description": "successful operation",
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "type": "array",
-                                    "items": {
-                                        "$ref": "#/components/schemas/PageCollection"
-                                    }
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/PageCollection"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
                                 }
                             }
                         }
@@ -58,7 +63,7 @@
                 ],
                 "summary": "Page detail",
                 "description": "Page detail",
-                "operationId": "App\\Api\\Controllers\\PageController::show",
+                "operationId": "getPage",
                 "parameters": [
                     {
                         "$ref": "#/components/parameters/slug"
@@ -85,7 +90,7 @@
                 ],
                 "summary": "Posts",
                 "description": "Posts",
-                "operationId": "App\\Api\\Controllers\\PostController::index",
+                "operationId": "getPosts",
                 "parameters": [
                     {
                         "$ref": "#/components/parameters/page"
@@ -111,10 +116,23 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "type": "array",
-                                    "items": {
-                                        "$ref": "#/components/schemas/PostCollection"
-                                    }
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/PostCollection"
+                                            }
+                                        },
+                                        "meta": {
+                                            "properties": {
+                                                "pagination": {
+                                                    "$ref": "#/components/schemas/Pagination"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
                                 }
                             }
                         }
@@ -129,7 +147,7 @@
                 ],
                 "summary": "Post detail",
                 "description": "Post detail",
-                "operationId": "App\\Api\\Controllers\\PostController::show",
+                "operationId": "getPost",
                 "parameters": [
                     {
                         "$ref": "#/components/parameters/slug"
@@ -156,7 +174,7 @@
                 ],
                 "summary": "Tags",
                 "description": "Tags",
-                "operationId": "App\\Api\\Controllers\\TagController::index",
+                "operationId": "getTags",
                 "responses": {
                     "200": {
                         "description": "successful operation"
@@ -187,6 +205,26 @@
     },
     "components": {
         "schemas": {
+            "Pagination": {
+                "properties": {
+                    "total": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "per_page": {
+                        "type": "integer"
+                    },
+                    "current_page": {
+                        "type": "integer"
+                    },
+                    "total_page": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
             "PageCollection": {
                 "properties": {
                     "title": {

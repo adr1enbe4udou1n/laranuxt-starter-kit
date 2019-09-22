@@ -14,6 +14,16 @@ use Illuminate\Support\Facades\Route;
  *     description="Laravel Front OpenApi"
  * )
  *
+ * @OA\Schema(
+ *     schema="Pagination",
+ *     type="object",
+ *     @OA\Property(property="total", type="integer"),
+ *     @OA\Property(property="count", type="integer"),
+ *     @OA\Property(property="per_page", type="integer"),
+ *     @OA\Property(property="current_page", type="integer"),
+ *     @OA\Property(property="total_page", type="integer")
+ * )
+ *
  * @OA\Parameter(
  *     name="page",
  *     description="Page offset",

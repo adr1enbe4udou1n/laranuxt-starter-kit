@@ -71,7 +71,7 @@ export default {
       links: [
         {
           title: 'Official Blog',
-          to: '/blog'
+          to: { name: 'blog' }
         },
         {
           title: 'About Us',

@@ -13,6 +13,7 @@ class PostController extends ApiController
      * @OA\Get(
      *     path="/cms/posts",
      *     tags={"cms"},
+     *     operationId="getPosts",
      *     summary="Posts",
      *     description="Posts",
      *     @OA\Parameter(ref="#/components/parameters/page"),
@@ -32,8 +33,20 @@ class PostController extends ApiController
      *         response=200,
      *         description="successful operation",
      *         @OA\JsonContent(
-     *             type="array",
-     *             @OA\Items(ref="#/components/schemas/PostCollection")
+     *             type="object",
+     *             @OA\Property(
+     *                 property="data",
+     *                 type="array",
+     *                 @OA\Items(ref="#/components/schemas/PostCollection")
+     *             ),
+     *             @OA\Property(
+     *                 property="meta",
+     *                 type="object",
+     *                 @OA\Property(
+     *                     property="pagination",
+     *                     ref="#/components/schemas/Pagination"
+     *                 )
+     *             )
      *         )
      *     )
      * )
@@ -60,6 +73,7 @@ class PostController extends ApiController
      * @OA\Get(
      *     path="/cms/posts/{slug}",
      *     tags={"cms"},
+     *     operationId="getPost",
      *     summary="Post detail",
      *     description="Post detail",
      *     @OA\Parameter(ref="#/components/parameters/slug"),

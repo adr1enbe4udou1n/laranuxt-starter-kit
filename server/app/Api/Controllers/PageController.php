@@ -12,14 +12,19 @@ class PageController extends ApiController
      * @OA\Get(
      *     path="/cms/pages",
      *     tags={"cms"},
+     *     operationId="getPages",
      *     summary="Pages",
      *     description="Pages",
      *     @OA\Response(
      *         response=200,
      *         description="successful operation",
      *         @OA\JsonContent(
-     *             type="array",
-     *             @OA\Items(ref="#/components/schemas/PageCollection")
+     *             type="object",
+     *             @OA\Property(
+     *                 property="data",
+     *                 type="array",
+     *                 @OA\Items(ref="#/components/schemas/PageCollection")
+     *             )
      *         )
      *     )
      * )
@@ -38,6 +43,7 @@ class PageController extends ApiController
      * @OA\Get(
      *     path="/cms/pages/{slug}",
      *     tags={"cms"},
+     *     operationId="getPage",
      *     summary="Page detail",
      *     description="Page detail",
      *     @OA\Parameter(ref="#/components/parameters/slug"),

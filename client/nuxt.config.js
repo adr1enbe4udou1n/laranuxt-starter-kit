@@ -35,7 +35,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '~/plugins/global.js' }],
+  plugins: [{ src: '~/plugins/global' }, { src: '~/plugins/api' }],
   /*
    ** Nuxt.js dev-modules
    */
@@ -45,14 +45,16 @@ export default {
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
     // Doc: https://github.com/nuxt-community/router-module
-    '@nuxtjs/router'
+    '@nuxtjs/router',
+    // Doc: https://github.com/nuxt-community/pwa-module
+    ['@nuxtjs/pwa', { icon: false }],
+    // Doc: https://github.com/nuxt/typescript
+    '@nuxt/typescript-build'
   ],
   /*
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
     '@nuxtjs/dotenv',
     [
       '@nuxtjs/recaptcha',
@@ -63,13 +65,6 @@ export default {
       }
     ]
   ],
-  /*
-   ** Axios module configuration
-   ** See https://axios.nuxtjs.org/options
-   */
-  axios: {
-    baseUrl: process.env.API_URL
-  },
   /*
    ** Build configuration
    */

@@ -10,6 +10,7 @@ class EnumController extends ApiController
      * @OA\Get(
      *     path="/enums",
      *     tags={"enums"},
+     *     operationId="getEnums",
      *     summary="Liste des enums",
      *     description="Liste des enums",
      *     @OA\Response(

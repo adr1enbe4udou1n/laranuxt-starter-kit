@@ -11,6 +11,7 @@ class TagController extends ApiController
      * @OA\Get(
      *     path="/cms/tags",
      *     tags={"cms"},
+     *     operationId="getTags",
      *     summary="Tags",
      *     description="Tags",
      *     @OA\Response(
