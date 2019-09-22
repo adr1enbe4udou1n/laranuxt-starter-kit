@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/recaptcha": "^0.5.3",
     "nuxt": "^2.0.0"
   },
