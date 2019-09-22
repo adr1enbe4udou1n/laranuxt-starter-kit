@@ -6,12 +6,23 @@ use League\Fractal;
 use App\Models\Post;
 use Coduo\PHPHumanizer\StringHumanizer;
 
+/**
+ * @OA\Schema(schema="PostCollection")
+ */
 class PostCollectionTransformer extends Fractal\TransformerAbstract
 {
-    protected $defaultIncludes = [
-        'tags',
-    ];
-
+    /**
+     * @OA\Property(property="title", type="string")
+     * @OA\Property(property="summary", type="string")
+     * @OA\Property(property="featured_image", type="string", format="uri")
+     * @OA\Property(property="publication_date", type="string", format="date-time")
+     * @OA\Property(property="slug", type="string")
+     * @OA\Property(property="url", type="string")
+     *
+     * @param Post $post
+     *
+     * @return array
+     */
     public function transform(Post $post)
     {
         return [
@@ -25,17 +36,5 @@ class PostCollectionTransformer extends Fractal\TransformerAbstract
                 'self' => route('api.cms.posts.show', $post->slug),
             ],
         ];
-    }
-
-    /**
-     * Include Tags.
-     *
-     * @param \App\Models\Post $post
-     *
-     * @return \League\Fractal\Resource\Collection
-     */
-    public function includeTags(Post $post)
-    {
-        return $this->collection($post->tagsWithType(), new TagTransformer());
     }
 }

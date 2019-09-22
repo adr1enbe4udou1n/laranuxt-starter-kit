@@ -5,15 +5,24 @@ namespace App\Transformers;
 use League\Fractal;
 use App\Models\Post;
 
+/**
+ * @OA\Schema(schema="PageCollection")
+ */
 class PageCollectionTransformer extends Fractal\TransformerAbstract
 {
+    /**
+     * @OA\Property(property="title", type="string")
+     * @OA\Property(property="slug", type="string")
+     * @OA\Property(property="url", type="string")
+     *
+     * @param Post $post
+     *
+     * @return array
+     */
     public function transform(Post $post)
     {
         return [
             'title'              => $post->title,
-            'summary'            => $post->summary,
-            'featured_image'     => $post->featured_image,
-            'publication_date'   => $post->publication_date,
             'slug'               => $post->slug,
             'url'                => $post->url,
             'links'              => [

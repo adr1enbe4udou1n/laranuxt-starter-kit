@@ -16,7 +16,11 @@ class PageController extends ApiController
      *     description="Pages",
      *     @OA\Response(
      *         response=200,
-     *         description="successful operation"
+     *         description="successful operation",
+     *         @OA\JsonContent(
+     *             type="array",
+     *             @OA\Items(ref="#/components/schemas/PageCollection")
+     *         )
      *     )
      * )
      *
@@ -39,7 +43,8 @@ class PageController extends ApiController
      *     @OA\Parameter(ref="#/components/parameters/slug"),
      *     @OA\Response(
      *         response=200,
-     *         description="successful operation"
+     *         description="successful operation",
+     *         @OA\JsonContent(ref="#/components/schemas/Page")
      *     )
      * )
      *
