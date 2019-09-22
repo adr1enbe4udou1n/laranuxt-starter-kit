@@ -1,0 +1,193 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Laravel OpenAPI",
+        "description": "Laravel Front OpenApi",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "/api"
+        }
+    ],
+    "paths": {
+        "/enums": {
+            "get": {
+                "tags": [
+                    "enums"
+                ],
+                "summary": "Liste des enums",
+                "description": "Liste des enums",
+                "operationId": "App\\Api\\Controllers\\EnumController::index",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/cms/pages": {
+            "get": {
+                "tags": [
+                    "cms"
+                ],
+                "summary": "Pages",
+                "description": "Pages",
+                "operationId": "App\\Api\\Controllers\\PageController::index",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/cms/pages/{slug}": {
+            "get": {
+                "tags": [
+                    "cms"
+                ],
+                "summary": "Page detail",
+                "description": "Page detail",
+                "operationId": "App\\Api\\Controllers\\PageController::show",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/slug"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/cms/posts": {
+            "get": {
+                "tags": [
+                    "cms"
+                ],
+                "summary": "Posts",
+                "description": "Posts",
+                "operationId": "App\\Api\\Controllers\\PostController::index",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/page"
+                    },
+                    {
+                        "$ref": "#/components/parameters/perPage"
+                    },
+                    {
+                        "name": "tags[]",
+                        "in": "query",
+                        "description": "Filter by tags",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/cms/posts/{slug}": {
+            "get": {
+                "tags": [
+                    "cms"
+                ],
+                "summary": "Post detail",
+                "description": "Post detail",
+                "operationId": "App\\Api\\Controllers\\PostController::show",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/slug"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/cms/tags": {
+            "get": {
+                "tags": [
+                    "cms"
+                ],
+                "summary": "Tags",
+                "description": "Tags",
+                "operationId": "App\\Api\\Controllers\\TagController::index",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/cms/tags/{slug}": {
+            "get": {
+                "tags": [
+                    "cms"
+                ],
+                "summary": "Tag detail",
+                "description": "Tag detail",
+                "operationId": "App\\Api\\Controllers\\TagController::show",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/slug"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "parameters": {
+            "page": {
+                "name": "page",
+                "in": "query",
+                "description": "Page offset",
+                "schema": {
+                    "type": "integer"
+                }
+            },
+            "perPage": {
+                "name": "perPage",
+                "in": "query",
+                "description": "Results by page",
+                "schema": {
+                    "type": "integer"
+                }
+            },
+            "slug": {
+                "name": "slug",
+                "in": "path",
+                "description": "Identifiant URL",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "cms",
+            "description": "Content (post or page)"
+        },
+        {
+            "name": "enums",
+            "description": "Enums"
+        }
+    ]
+}

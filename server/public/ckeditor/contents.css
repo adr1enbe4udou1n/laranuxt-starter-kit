@@ -1,0 +1,35 @@
+body
+{
+    font-family: "Open Sans", sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h2 {
+    color: #013C84;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+}
+
+h2:first-child {
+    margin-top: 0;
+}
+
+h3 {
+    color: #099BD6;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.text-primary {
+    color: #099BD6;
+}
+
+.text-secondary {
+    color: #FF5280;
+}

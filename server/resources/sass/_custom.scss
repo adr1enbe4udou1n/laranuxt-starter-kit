@@ -1,0 +1,54 @@
+.form-label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+fieldset legend {
+  font-size: 1.125rem;
+  padding-bottom: 0.5rem;
+  border-bottom: solid 1px $gray-200;
+}
+
+.card-header {
+  background: none;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  min-height: 3.5rem;
+
+  .card-title {
+    margin-bottom: 0;
+  }
+}
+
+.card-title {
+  font-size: 1.125rem;
+  line-height: 1.2;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.card-options {
+  margin-left: auto;
+  display: flex;
+  order: 100;
+  margin-right: -.5rem;
+  align-self: center;
+}
+
+.input-group-prepend>.input-group-text {
+  border-right: 0;
+}
+
+.input-group-append>.input-group-text {
+  border-left: 0;
+}
+
+.custom-file.is-invalid ~ .invalid-feedback {
+  display: block;
+}
+
+.form-control[type="number"] {
+  text-align: right;
+}

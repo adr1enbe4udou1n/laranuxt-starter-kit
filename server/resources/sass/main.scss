@@ -1,0 +1,21 @@
+
+// Fonts
+@import 'fonts/feather';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+
+// Variables
+@import 'variables';
+
+// CoreUI theme
+@import "~@coreui/coreui/scss/coreui";
+
+// Bootstrap Vue Specific
+@import '~bootstrap-vue/src/index.scss';
+
+// Plugins
+@import "~sweetalert2/src/sweetalert2";
+@import '~flatpickr/dist/flatpickr.css';
+
+// Custom
+@import 'custom';
