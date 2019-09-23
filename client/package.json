@@ -10,7 +10,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "openapi": "openapi-generator generate -i http://laravel-api.localhost/docs/api-docs.json -g typescript-fetch -o openapi --additional-properties=typescriptThreePlus=true"
+    "openapi": "openapi-generator generate -g typescript-fetch -o openapi --additional-properties=typescriptThreePlus=true -i"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint"
