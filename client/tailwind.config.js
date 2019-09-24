@@ -6,7 +6,9 @@
  */
 module.exports = {
   theme: {},
-  variants: {},
+  variants: {
+    borderWidth: ['last']
+  },
   plugins: [
     function({ addUtilities }) {
       addUtilities({

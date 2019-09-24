@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
  *     @OA\Property(property="count", type="integer"),
  *     @OA\Property(property="per_page", type="integer"),
  *     @OA\Property(property="current_page", type="integer"),
- *     @OA\Property(property="total_page", type="integer")
+ *     @OA\Property(property="total_pages", type="integer")
  * )
  *
  * @OA\Parameter(

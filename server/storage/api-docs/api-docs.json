@@ -219,7 +219,7 @@
                     "current_page": {
                         "type": "integer"
                     },
-                    "total_page": {
+                    "total_pages": {
                         "type": "integer"
                     }
                 },
