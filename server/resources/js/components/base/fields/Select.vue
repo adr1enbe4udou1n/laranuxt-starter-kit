@@ -101,8 +101,8 @@ export default {
         `${this.modelRoute}.index`,
         Object.assign(
           {
-            column: this.column || this.label,
-            direction: this.direction,
+            sortBy: this.column || this.label,
+            sortDesc: this.direction === 'desc',
             perPage: 50
           },
           this.modelRouteQuery

@@ -35,7 +35,11 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '~/plugins/global' }, { src: '~/plugins/api' }],
+  plugins: [
+    '~/plugins/global',
+    '~/plugins/api',
+    '~/plugins/vue-lazyload.client'
+  ],
   /*
    ** Nuxt.js dev-modules
    */

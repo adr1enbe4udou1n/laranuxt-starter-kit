@@ -1223,16 +1223,16 @@
         },
         {
             "name": "itsgoingd/clockwork",
-            "version": "v4.0.9",
+            "version": "v4.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/itsgoingd/clockwork.git",
-                "reference": "cccf3070001e97b8a75eab9fc4d405b581b827fd"
+                "reference": "acca3a589a227fd7e8c4826b9a6373d7dccb31d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/itsgoingd/clockwork/zipball/cccf3070001e97b8a75eab9fc4d405b581b827fd",
-                "reference": "cccf3070001e97b8a75eab9fc4d405b581b827fd",
+                "url": "https://api.github.com/repos/itsgoingd/clockwork/zipball/acca3a589a227fd7e8c4826b9a6373d7dccb31d3",
+                "reference": "acca3a589a227fd7e8c4826b9a6373d7dccb31d3",
                 "shasum": ""
             },
             "require": {
@@ -1277,7 +1277,7 @@
                 "profiling",
                 "slim"
             ],
-            "time": "2019-09-21T20:25:16+00:00"
+            "time": "2019-09-26T12:37:22+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -1369,16 +1369,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v6.0.3",
+            "version": "v6.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "56789e9dec750e0fbe8e9e6ae90a01a4e6887902"
+                "reference": "372e0add8a58e0e3deb78f87cbb2dc40d3e0ff08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/56789e9dec750e0fbe8e9e6ae90a01a4e6887902",
-                "reference": "56789e9dec750e0fbe8e9e6ae90a01a4e6887902",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/372e0add8a58e0e3deb78f87cbb2dc40d3e0ff08",
+                "reference": "372e0add8a58e0e3deb78f87cbb2dc40d3e0ff08",
                 "shasum": ""
             },
             "require": {
@@ -1510,7 +1510,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2019-09-10T18:46:24+00:00"
+            "time": "2019-09-24T13:40:36+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -3106,16 +3106,16 @@
         },
         {
             "name": "spatie/enum",
-            "version": "2.3.2",
+            "version": "2.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/enum.git",
-                "reference": "f42ebe26308bf00d486ef7e18d8518a3e3de5892"
+                "reference": "517a1cdae6502c8c768e995804a7740a17bf65ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/enum/zipball/f42ebe26308bf00d486ef7e18d8518a3e3de5892",
-                "reference": "f42ebe26308bf00d486ef7e18d8518a3e3de5892",
+                "url": "https://api.github.com/repos/spatie/enum/zipball/517a1cdae6502c8c768e995804a7740a17bf65ff",
+                "reference": "517a1cdae6502c8c768e995804a7740a17bf65ff",
                 "shasum": ""
             },
             "require": {
@@ -3158,7 +3158,7 @@
                 "enumerable",
                 "spatie"
             ],
-            "time": "2019-09-05T21:28:08+00:00"
+            "time": "2019-09-25T20:04:07+00:00"
         },
         {
             "name": "spatie/fractalistic",
@@ -3384,16 +3384,16 @@
         },
         {
             "name": "spatie/laravel-medialibrary",
-            "version": "7.12.1",
+            "version": "7.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-medialibrary.git",
-                "reference": "8c4adaeb16985a108da4e0dab186bc7561bbbf8f"
+                "reference": "af0505b7e1f4c5c92b616aa30e5253f2c98fc647"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-medialibrary/zipball/8c4adaeb16985a108da4e0dab186bc7561bbbf8f",
-                "reference": "8c4adaeb16985a108da4e0dab186bc7561bbbf8f",
+                "url": "https://api.github.com/repos/spatie/laravel-medialibrary/zipball/af0505b7e1f4c5c92b616aa30e5253f2c98fc647",
+                "reference": "af0505b7e1f4c5c92b616aa30e5253f2c98fc647",
                 "shasum": ""
             },
             "require": {
@@ -3464,7 +3464,7 @@
                 "media",
                 "spatie"
             ],
-            "time": "2019-09-12T22:01:47+00:00"
+            "time": "2019-09-25T09:51:20+00:00"
         },
         {
             "name": "spatie/laravel-tags",

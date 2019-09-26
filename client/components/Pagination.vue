@@ -1,21 +1,34 @@
 <template>
   <div>
     <ul class="flex border rounded">
+      <li class="item">
+        <nuxt-link :tag="getTag(1)" :to="linkGen(1)">
+          «
+        </nuxt-link>
+      </li>
+      <li class="item">
+        <nuxt-link :tag="getTag(1)" :to="linkGen(currentPage - 1)">
+          ‹
+        </nuxt-link>
+      </li>
       <li
         v-for="pageNum in pages"
         :key="pageNum"
         :class="{ active: isActive(pageNum) }"
         class="item"
       >
-        <span v-if="isActive(pageNum)">
+        <nuxt-link :tag="getTag(pageNum)" :to="linkGen(pageNum)">
           {{ pageNum }}
-        </span>
-        <nuxt-link
-          v-else
-          :to="linkGen(pageNum)"
-          class="hover:text-white hover:bg-gray-500"
-        >
-          {{ pageNum }}
+        </nuxt-link>
+      </li>
+      <li class="item">
+        <nuxt-link :tag="getTag(pages)" :to="linkGen(currentPage + 1)">
+          ›
+        </nuxt-link>
+      </li>
+      <li class="item">
+        <nuxt-link :tag="getTag(pages)" :to="linkGen(pages)">
+          »
         </nuxt-link>
       </li>
     </ul>
@@ -41,6 +54,9 @@ export default {
   methods: {
     isActive(pageNum) {
       return this.currentPage === pageNum
+    },
+    getTag(pageNum) {
+      return this.isActive(pageNum) ? 'span' : 'a'
     }
   }
 }
@@ -51,6 +67,10 @@ export default {
   & a,
   & span {
     @apply block w-10 text-center border-r py-2;
+  }
+
+  & a:hover {
+    @apply text-white bg-gray-500;
   }
 
   &:first-child {

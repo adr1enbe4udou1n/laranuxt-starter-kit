@@ -11,6 +11,9 @@ class PostsTableSeeder extends Seeder
      */
     public function run()
     {
+        Post::all()->each->delete();
+        Tag::all()->each->delete();
+
         // Import de tags
         factory(Tag::class)->times(30)->create();
 
@@ -51,21 +54,19 @@ class PostsTableSeeder extends Seeder
             'Privacy',
             'About Us',
         ])->each(function ($title) use ($faker) {
-            /** @var \Illuminate\Database\Eloquent\Collection $post */
+            /** @var Post $post */
             $post = factory(Post::class)->states(['page', 'published'])->create([
                 'title' => $title,
             ]);
 
-            $post->each(function (Post $post) use ($faker) {
-                // Featured image
-                $post->addMedia(DatabaseSeeder::randomMediaPath($faker, 'business'))
-                    ->preservingOriginal()
-                    ->toMediaCollection('featured_images');
+            // Featured image
+            $post->addMedia(DatabaseSeeder::randomMediaPath($faker, 'business'))
+                ->preservingOriginal()
+                ->toMediaCollection('featured_images');
 
-                // Rich text
-                $post->body = DatabaseSeeder::generateRichBody($faker);
-                $post->save();
-            });
+            // Rich text
+            $post->body = DatabaseSeeder::generateRichBody($faker);
+            $post->save();
         });
     }
 }

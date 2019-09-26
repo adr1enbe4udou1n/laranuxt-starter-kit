@@ -24,8 +24,12 @@ class PostTransformer extends Fractal\TransformerAbstract
      * @OA\Property(property="url", type="string")
      * @OA\Property(
      *     property="tags",
-     *     type="array",
-     *     @OA\Items(ref="#/components/schemas/Tag")
+     *     type="object",
+     *     @OA\Property(
+     *         property="data",
+     *         type="array",
+     *         @OA\Items(ref="#/components/schemas/Tag")
+     *     )
      * )
      *
      * @param Post $post

@@ -26,7 +26,7 @@ Route::group(['prefix' => config('app.admin_path')], function () {
         /*
          * Admin resources management routes
          */
-        Route::group(['namespace' => 'Admin', 'prefix' => 'api'], function () {
+        Route::group(['namespace' => 'Admin', 'prefix' => 'backend'], function () {
             Route::group(['namespace' => 'Generic'], function () {
                 /*
                  * Generic resource routes (counters + bulk)
