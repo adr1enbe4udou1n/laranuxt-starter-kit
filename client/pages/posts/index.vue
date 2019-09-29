@@ -41,11 +41,18 @@ export default {
     FooterCta,
     Pagination
   },
-  async asyncData({ app, query }) {
-    const { data, meta } = await app.$cmsApi.getPosts({
+  async asyncData({ app, params, query }) {
+    const request = {
       page: parseInt(query.page || 1, 10),
       perPage: 18
-    })
+    }
+
+    if (params.tag) {
+      const tag = await app.$cmsApi.getTag({ slug: params.tag })
+      request.tags = [tag.name]
+    }
+
+    const { data, meta } = await app.$cmsApi.getPosts(request)
     return {
       posts: data,
       pages: meta.pagination.totalPages,

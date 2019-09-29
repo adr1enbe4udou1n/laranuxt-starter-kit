@@ -1223,16 +1223,16 @@
         },
         {
             "name": "itsgoingd/clockwork",
-            "version": "v4.0.10",
+            "version": "v4.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/itsgoingd/clockwork.git",
-                "reference": "acca3a589a227fd7e8c4826b9a6373d7dccb31d3"
+                "reference": "bd42abf556ebac54d004b33ea4f116bd9f213eeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/itsgoingd/clockwork/zipball/acca3a589a227fd7e8c4826b9a6373d7dccb31d3",
-                "reference": "acca3a589a227fd7e8c4826b9a6373d7dccb31d3",
+                "url": "https://api.github.com/repos/itsgoingd/clockwork/zipball/bd42abf556ebac54d004b33ea4f116bd9f213eeb",
+                "reference": "bd42abf556ebac54d004b33ea4f116bd9f213eeb",
                 "shasum": ""
             },
             "require": {
@@ -1277,7 +1277,7 @@
                 "profiling",
                 "slim"
             ],
-            "time": "2019-09-26T12:37:22+00:00"
+            "time": "2019-09-28T20:56:38+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -3384,16 +3384,16 @@
         },
         {
             "name": "spatie/laravel-medialibrary",
-            "version": "7.14.0",
+            "version": "7.14.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-medialibrary.git",
-                "reference": "af0505b7e1f4c5c92b616aa30e5253f2c98fc647"
+                "reference": "34f3700a2dc58032d0ab443dcb09c2be72d2a826"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-medialibrary/zipball/af0505b7e1f4c5c92b616aa30e5253f2c98fc647",
-                "reference": "af0505b7e1f4c5c92b616aa30e5253f2c98fc647",
+                "url": "https://api.github.com/repos/spatie/laravel-medialibrary/zipball/34f3700a2dc58032d0ab443dcb09c2be72d2a826",
+                "reference": "34f3700a2dc58032d0ab443dcb09c2be72d2a826",
                 "shasum": ""
             },
             "require": {
@@ -3464,7 +3464,7 @@
                 "media",
                 "spatie"
             ],
-            "time": "2019-09-25T09:51:20+00:00"
+            "time": "2019-09-26T22:59:00+00:00"
         },
         {
             "name": "spatie/laravel-tags",
@@ -6113,16 +6113,16 @@
         },
         {
             "name": "facade/flare-client-php",
-            "version": "1.0.4",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facade/flare-client-php.git",
-                "reference": "7128b251b48f24ef64e5cddd7f8d40cc3a06fd3e"
+                "reference": "4de2e8062e66edadbff261ebb5baae6eccfb799c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facade/flare-client-php/zipball/7128b251b48f24ef64e5cddd7f8d40cc3a06fd3e",
-                "reference": "7128b251b48f24ef64e5cddd7f8d40cc3a06fd3e",
+                "url": "https://api.github.com/repos/facade/flare-client-php/zipball/4de2e8062e66edadbff261ebb5baae6eccfb799c",
+                "reference": "4de2e8062e66edadbff261ebb5baae6eccfb799c",
                 "shasum": ""
             },
             "require": {
@@ -6134,7 +6134,7 @@
             },
             "require-dev": {
                 "larapack/dd": "^1.1",
-                "phpunit/phpunit": "^7.0",
+                "phpunit/phpunit": "^7.5.16",
                 "spatie/phpunit-snapshot-assertions": "^2.0"
             },
             "type": "library",
@@ -6163,26 +6163,26 @@
                 "flare",
                 "reporting"
             ],
-            "time": "2019-09-11T14:19:56+00:00"
+            "time": "2019-09-27T14:54:17+00:00"
         },
         {
             "name": "facade/ignition",
-            "version": "1.8.2",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facade/ignition.git",
-                "reference": "4ff9397a24da58b35382802e2d22325b640123ea"
+                "reference": "40461a1f680171876c186dfff419b2a4c892995c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facade/ignition/zipball/4ff9397a24da58b35382802e2d22325b640123ea",
-                "reference": "4ff9397a24da58b35382802e2d22325b640123ea",
+                "url": "https://api.github.com/repos/facade/ignition/zipball/40461a1f680171876c186dfff419b2a4c892995c",
+                "reference": "40461a1f680171876c186dfff419b2a4c892995c",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-mbstring": "*",
-                "facade/flare-client-php": "^1.0.4",
+                "facade/flare-client-php": "^1.1",
                 "facade/ignition-contracts": "^1.0",
                 "filp/whoops": "^2.4",
                 "illuminate/support": "~5.5.0 || ~5.6.0 || ~5.7.0 || ~5.8.0 || ^6.0",
@@ -6217,7 +6217,10 @@
             "autoload": {
                 "psr-4": {
                     "Facade\\Ignition\\": "src"
-                }
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -6231,7 +6234,7 @@
                 "laravel",
                 "page"
             ],
-            "time": "2019-09-20T09:37:06+00:00"
+            "time": "2019-09-27T16:49:08+00:00"
         },
         {
             "name": "facade/ignition-contracts",

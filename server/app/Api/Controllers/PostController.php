@@ -80,7 +80,7 @@ class PostController extends ApiController
      *     @OA\Response(
      *         response=200,
      *         description="successful operation",
-     *         @OA\JsonContent(ref="#/components/schemas/Post"),
+     *         @OA\JsonContent(ref="#/components/schemas/Post")
      *     )
      * )
      *

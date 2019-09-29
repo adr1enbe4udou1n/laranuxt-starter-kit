@@ -177,7 +177,22 @@
                 "operationId": "getTags",
                 "responses": {
                     "200": {
-                        "description": "successful operation"
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/Tag"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -189,7 +204,7 @@
                 ],
                 "summary": "Tag detail",
                 "description": "Tag detail",
-                "operationId": "App\\Api\\Controllers\\TagController::show",
+                "operationId": "getTag",
                 "parameters": [
                     {
                         "$ref": "#/components/parameters/slug"
@@ -197,7 +212,14 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "successful operation"
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Tag"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -284,6 +306,17 @@
                     },
                     "url": {
                         "type": "string"
+                    },
+                    "tags": {
+                        "properties": {
+                            "data": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/Tag"
+                                }
+                            }
+                        },
+                        "type": "object"
                     }
                 },
                 "type": "object"
@@ -314,10 +347,15 @@
                         "type": "string"
                     },
                     "tags": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Tag"
-                        }
+                        "properties": {
+                            "data": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/Tag"
+                                }
+                            }
+                        },
+                        "type": "object"
                     }
                 },
                 "type": "object"

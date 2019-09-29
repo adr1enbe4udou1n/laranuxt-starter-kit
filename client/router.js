@@ -25,6 +25,11 @@ export function createRouter() {
         path: '/blog/:slug',
         name: 'post',
         component: PostPage
+      },
+      {
+        path: '/blog/tags/:tag',
+        name: 'tag',
+        component: BlogPage
       }
     ]
   })

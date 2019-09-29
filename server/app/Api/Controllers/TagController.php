@@ -16,7 +16,15 @@ class TagController extends ApiController
      *     description="Tags",
      *     @OA\Response(
      *         response=200,
-     *         description="successful operation"
+     *         description="successful operation",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(
+     *                 property="data",
+     *                 type="array",
+     *                 @OA\Items(ref="#/components/schemas/Tag")
+     *             )
+     *         )
      *     )
      * )
      *
@@ -31,12 +39,14 @@ class TagController extends ApiController
      * @OA\Get(
      *     path="/cms/tags/{slug}",
      *     tags={"cms"},
+     *     operationId="getTag",
      *     summary="Tag detail",
      *     description="Tag detail",
      *     @OA\Parameter(ref="#/components/parameters/slug"),
      *     @OA\Response(
      *         response=200,
-     *         description="successful operation"
+     *         description="successful operation",
+     *         @OA\JsonContent(ref="#/components/schemas/Tag")
      *     )
      * )
      *

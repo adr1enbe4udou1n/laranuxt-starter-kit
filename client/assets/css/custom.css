@@ -1,3 +1,19 @@
-.nuxt-link-active {
+.router-link-active {
   @apply font-bold;
+}
+
+.wysiwyg-content {
+  @apply text-justify;
+  & :first-child {
+    @apply mt-0;
+  }
+  & h2 {
+    @apply text-3xl mb-10 font-bold mt-20;
+  }
+  & h3 {
+    @apply text-xl mb-10 font-semibold uppercase mt-12;
+  }
+  & p {
+    @apply mb-6;
+  }
 }

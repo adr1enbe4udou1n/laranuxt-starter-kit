@@ -11,15 +11,24 @@
           ‹
         </nuxt-link>
       </li>
+      <li v-if="showFirstDots" class="item">
+        <span>...</span>
+      </li>
       <li
-        v-for="pageNum in pages"
-        :key="pageNum"
-        :class="{ active: isActive(pageNum) }"
+        v-for="pageNum in numberOfLinks"
+        :key="pageNum + startNumber - 1"
+        :class="{ active: isActive(pageNum + startNumber - 1) }"
         class="item"
       >
-        <nuxt-link :tag="getTag(pageNum)" :to="linkGen(pageNum)">
-          {{ pageNum }}
+        <nuxt-link
+          :tag="getTag(pageNum + startNumber - 1)"
+          :to="linkGen(pageNum + startNumber - 1)"
+        >
+          {{ pageNum + startNumber - 1 }}
         </nuxt-link>
+      </li>
+      <li v-if="showLastDots" class="item">
+        <span>...</span>
       </li>
       <li class="item">
         <nuxt-link :tag="getTag(pages)" :to="linkGen(currentPage + 1)">
@@ -46,9 +55,82 @@ export default {
       type: Number,
       default: 1
     },
+    limit: {
+      type: Number,
+      default: 5
+    },
     linkGen: {
       type: Function,
       default: () => () => {}
+    }
+  },
+  data() {
+    return {
+      ellipsesThreshold: 3
+    }
+  },
+  computed: {
+    showAllPages() {
+      return this.pages <= this.limit
+    },
+    nearFromBeginning() {
+      return (
+        !this.showAllPages &&
+        (this.currentPage < this.limit - 1 &&
+          this.limit > this.ellipsesThreshold)
+      )
+    },
+    nearFromEnd() {
+      return (
+        !this.showAllPages &&
+        !this.nearFromBeginning &&
+        (this.pages - this.currentPage + 2 < this.limit &&
+          this.limit > this.ellipsesThreshold)
+      )
+    },
+    isOnTheMiddle() {
+      return (
+        !this.showAllPages &&
+        !this.nearFromBeginning &&
+        !this.nearFromEnd &&
+        this.limit > this.ellipsesThreshold
+      )
+    },
+    showFirstDots() {
+      return this.nearFromEnd || this.isOnTheMiddle
+    },
+    showLastDots() {
+      return this.nearFromBeginning || this.isOnTheMiddle
+    },
+    startNumber() {
+      let startNumber = 1
+
+      if (this.nearFromEnd) {
+        startNumber = this.pages - this.numberOfLinks + 1
+      } else if (this.isOnTheMiddle) {
+        startNumber = this.currentPage - Math.floor(this.numberOfLinks / 2)
+      }
+
+      if (startNumber < 1) {
+        return 1
+      }
+
+      if (startNumber > this.pages - this.numberOfLinks) {
+        return this.pages - this.numberOfLinks + 1
+      }
+      return startNumber
+    },
+    numberOfLinks() {
+      if (this.showAllPages) {
+        return this.pages
+      }
+      if (this.nearFromBeginning || this.nearFromEnd) {
+        return this.limit - 1
+      }
+      if (this.isOnTheMiddle) {
+        return this.limit - 2
+      }
+      return this.limit
     }
   },
   methods: {
