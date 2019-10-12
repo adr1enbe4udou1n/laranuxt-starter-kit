@@ -4,6 +4,8 @@ import Router from 'vue-router'
 import HomePage from '~/pages/index'
 import BlogPage from '~/pages/posts/index'
 import PostPage from '~/pages/posts/_slug'
+import Page from '~/pages/_slug'
+import Contact from '~/pages/contact'
 
 Vue.use(Router)
 
@@ -30,6 +32,16 @@ export function createRouter() {
         path: '/blog/tags/:tag',
         name: 'tag',
         component: BlogPage
+      },
+      {
+        path: '/contact',
+        name: 'contact',
+        component: Contact
+      },
+      {
+        path: '/:slug',
+        name: 'page',
+        component: Page
       }
     ]
   })

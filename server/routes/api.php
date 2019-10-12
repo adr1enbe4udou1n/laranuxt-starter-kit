@@ -21,3 +21,5 @@ Route::group(['prefix' => 'cms'], function () {
     Route::get('tags', 'TagController@index')->name('cms.tags');
     Route::get('tags/{tag}', 'TagController@show')->name('cms.tags.show');
 });
+
+Route::post('contact/send', 'ContactController@send')->name('contact.send');

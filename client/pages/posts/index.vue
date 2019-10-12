@@ -2,7 +2,7 @@
   <page>
     <header-cta slot="hero"></header-cta>
 
-    <div class="bg-white text-black">
+    <div class="bg-white text-gray-700">
       <div class="container mx-auto py-6">
         <div class="flex flex-wrap mb-6 -mx-4">
           <div

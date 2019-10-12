@@ -59,6 +59,8 @@ return [
 
     'admin_path' => env('APP_ADMIN_PATH', '/admin'),
 
+    'admin_email' => env('APP_ADMIN_EMAIL', 'admin@example.com'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Timezone

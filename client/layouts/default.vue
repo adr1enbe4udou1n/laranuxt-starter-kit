@@ -13,6 +13,7 @@ import AppNav from '~/components/Nav'
 import AppFooter from '~/components/Footer'
 
 export default {
+  name: 'Layout',
   components: {
     AppNav,
     AppFooter

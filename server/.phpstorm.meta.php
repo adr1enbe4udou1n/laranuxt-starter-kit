@@ -5,7 +5,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2019-09-22 19:24:51.
+    * Generated on 2019-10-12 19:37:43.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -100,6 +100,7 @@ namespace PHPSTORM_META {
         'command.l5-swagger.generate' => \L5Swagger\Console\GenerateDocsCommand::class,
         'command.listener.make' => \Illuminate\Foundation\Console\ListenerMakeCommand::class,
         'command.mail.make' => \Illuminate\Foundation\Console\MailMakeCommand::class,
+        'command.make:solution' => \Facade\Ignition\Commands\SolutionMakeCommand::class,
         'command.medialibrary:clean' => \Spatie\MediaLibrary\Commands\CleanCommand::class,
         'command.medialibrary:clear' => \Spatie\MediaLibrary\Commands\ClearCommand::class,
         'command.medialibrary:regenerate' => \Spatie\MediaLibrary\Commands\RegenerateCommand::class,
@@ -282,6 +283,7 @@ namespace PHPSTORM_META {
         'command.l5-swagger.generate' => \L5Swagger\Console\GenerateDocsCommand::class,
         'command.listener.make' => \Illuminate\Foundation\Console\ListenerMakeCommand::class,
         'command.mail.make' => \Illuminate\Foundation\Console\MailMakeCommand::class,
+        'command.make:solution' => \Facade\Ignition\Commands\SolutionMakeCommand::class,
         'command.medialibrary:clean' => \Spatie\MediaLibrary\Commands\CleanCommand::class,
         'command.medialibrary:clear' => \Spatie\MediaLibrary\Commands\ClearCommand::class,
         'command.medialibrary:regenerate' => \Spatie\MediaLibrary\Commands\RegenerateCommand::class,
@@ -464,6 +466,7 @@ namespace PHPSTORM_META {
         'command.l5-swagger.generate' => \L5Swagger\Console\GenerateDocsCommand::class,
         'command.listener.make' => \Illuminate\Foundation\Console\ListenerMakeCommand::class,
         'command.mail.make' => \Illuminate\Foundation\Console\MailMakeCommand::class,
+        'command.make:solution' => \Facade\Ignition\Commands\SolutionMakeCommand::class,
         'command.medialibrary:clean' => \Spatie\MediaLibrary\Commands\CleanCommand::class,
         'command.medialibrary:clear' => \Spatie\MediaLibrary\Commands\ClearCommand::class,
         'command.medialibrary:regenerate' => \Spatie\MediaLibrary\Commands\RegenerateCommand::class,
@@ -646,6 +649,7 @@ namespace PHPSTORM_META {
         'command.l5-swagger.generate' => \L5Swagger\Console\GenerateDocsCommand::class,
         'command.listener.make' => \Illuminate\Foundation\Console\ListenerMakeCommand::class,
         'command.mail.make' => \Illuminate\Foundation\Console\MailMakeCommand::class,
+        'command.make:solution' => \Facade\Ignition\Commands\SolutionMakeCommand::class,
         'command.medialibrary:clean' => \Spatie\MediaLibrary\Commands\CleanCommand::class,
         'command.medialibrary:clear' => \Spatie\MediaLibrary\Commands\ClearCommand::class,
         'command.medialibrary:regenerate' => \Spatie\MediaLibrary\Commands\RegenerateCommand::class,
@@ -828,6 +832,7 @@ namespace PHPSTORM_META {
         'command.l5-swagger.generate' => \L5Swagger\Console\GenerateDocsCommand::class,
         'command.listener.make' => \Illuminate\Foundation\Console\ListenerMakeCommand::class,
         'command.mail.make' => \Illuminate\Foundation\Console\MailMakeCommand::class,
+        'command.make:solution' => \Facade\Ignition\Commands\SolutionMakeCommand::class,
         'command.medialibrary:clean' => \Spatie\MediaLibrary\Commands\CleanCommand::class,
         'command.medialibrary:clear' => \Spatie\MediaLibrary\Commands\ClearCommand::class,
         'command.medialibrary:regenerate' => \Spatie\MediaLibrary\Commands\RegenerateCommand::class,
@@ -1010,6 +1015,7 @@ namespace PHPSTORM_META {
         'command.l5-swagger.generate' => \L5Swagger\Console\GenerateDocsCommand::class,
         'command.listener.make' => \Illuminate\Foundation\Console\ListenerMakeCommand::class,
         'command.mail.make' => \Illuminate\Foundation\Console\MailMakeCommand::class,
+        'command.make:solution' => \Facade\Ignition\Commands\SolutionMakeCommand::class,
         'command.medialibrary:clean' => \Spatie\MediaLibrary\Commands\CleanCommand::class,
         'command.medialibrary:clear' => \Spatie\MediaLibrary\Commands\ClearCommand::class,
         'command.medialibrary:regenerate' => \Spatie\MediaLibrary\Commands\RegenerateCommand::class,
@@ -1192,6 +1198,7 @@ namespace PHPSTORM_META {
         'command.l5-swagger.generate' => \L5Swagger\Console\GenerateDocsCommand::class,
         'command.listener.make' => \Illuminate\Foundation\Console\ListenerMakeCommand::class,
         'command.mail.make' => \Illuminate\Foundation\Console\MailMakeCommand::class,
+        'command.make:solution' => \Facade\Ignition\Commands\SolutionMakeCommand::class,
         'command.medialibrary:clean' => \Spatie\MediaLibrary\Commands\CleanCommand::class,
         'command.medialibrary:clear' => \Spatie\MediaLibrary\Commands\ClearCommand::class,
         'command.medialibrary:regenerate' => \Spatie\MediaLibrary\Commands\RegenerateCommand::class,
@@ -1374,6 +1381,7 @@ namespace PHPSTORM_META {
         'command.l5-swagger.generate' => \L5Swagger\Console\GenerateDocsCommand::class,
         'command.listener.make' => \Illuminate\Foundation\Console\ListenerMakeCommand::class,
         'command.mail.make' => \Illuminate\Foundation\Console\MailMakeCommand::class,
+        'command.make:solution' => \Facade\Ignition\Commands\SolutionMakeCommand::class,
         'command.medialibrary:clean' => \Spatie\MediaLibrary\Commands\CleanCommand::class,
         'command.medialibrary:clear' => \Spatie\MediaLibrary\Commands\ClearCommand::class,
         'command.medialibrary:regenerate' => \Spatie\MediaLibrary\Commands\RegenerateCommand::class,

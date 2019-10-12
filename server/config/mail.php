@@ -59,6 +59,11 @@ return [
         'name'    => env('MAIL_FROM_NAME', 'Laravel API'),
     ],
 
+    'to' => [
+        'address' => env('MAIL_TO_ADDRESS', 'admin@example.com'),
+        'name'    => env('MAIL_TO_NAME', 'ADMIN'),
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | E-Mail Encryption Protocol

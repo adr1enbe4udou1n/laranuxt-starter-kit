@@ -10,6 +10,7 @@ module.exports = {
     borderWidth: ['last']
   },
   plugins: [
+    require('@tailwindcss/custom-forms'),
     function({ addUtilities }) {
       addUtilities({
         '.gradient': {
