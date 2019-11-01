@@ -17,30 +17,22 @@
             <span class="">Name</span>
             <input
               v-model="form.name"
+              v-validate="'name'"
               class="form-input mt-1 block w-full"
-              :class="{ 'border-red-500': hasError('name') }"
               placeholder="Jane Doe"
             />
-            <ol
-              v-if="hasError('name')"
-              class="text-red-500 text-xs italic mt-3"
-            >
-              <li
-                v-for="(message, index) in errorMessages('name')"
-                :key="index"
-              >
-                {{ message }}
-              </li>
-            </ol>
+            <form-invalid-feedback name="name"></form-invalid-feedback>
           </label>
 
           <label class="block mt-4">
             <span class="">Email</span>
             <input
               v-model="form.email"
+              v-validate="'email'"
               class="form-input mt-1 block w-full"
               placeholder="jane.doe@example.com"
             />
+            <form-invalid-feedback name="email"></form-invalid-feedback>
           </label>
 
           <div class="mt-4">
@@ -73,6 +65,7 @@
             <span class="">Requested Limit</span>
             <select
               v-model="form.requestLimit"
+              v-validate="'request_limit'"
               class="form-select mt-1 block w-full"
             >
               <option value="">Select limit</option>
@@ -81,6 +74,7 @@
               <option value="10000">$10,000</option>
               <option value="25000">$25,000</option>
             </select>
+            <form-invalid-feedback name="request_limit"></form-invalid-feedback>
           </label>
 
           <label class="block mt-4">
@@ -129,15 +123,17 @@
             <span class="">Message</span>
             <textarea
               v-model="form.message"
+              v-validate="'message'"
               class="form-input mt-1 block w-full"
               placeholder="Message"
               :rows="5"
             />
+            <form-invalid-feedback name="message"></form-invalid-feedback>
           </label>
 
           <div class="flex mt-4">
             <label class="flex items-center">
-              <input type="checkbox" class="form-checkbox" />
+              <input type="checkbox" class="form-checkbox" required />
               <span class="ml-2"
                 >I agree to the
                 <nuxt-link to="/privacy"
@@ -163,6 +159,9 @@
               >Terms of Service</a
             >
             apply.
+            <form-invalid-feedback
+              name="g-recaptcha-response"
+            ></form-invalid-feedback>
           </div>
 
           <button
@@ -181,6 +180,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 import HeaderCta from '~/components/call-to-actions/HeaderCta'
 import FooterCta from '~/components/call-to-actions/FooterCta'
 import Alert from '~/components/Alert'
@@ -199,28 +199,39 @@ export default {
         email: '',
         type: 'personal',
         requestLimit: '',
+        address: '',
         city: '',
         zip: '',
         phone: '',
         message: ''
       },
-      errors: {},
       alert: null,
       pending: false
     }
   },
   methods: {
-    hasError(name) {
-      return this.errors.hasOwnProperty(name)
-    },
-    errorMessages(name) {
-      return this.errors[name] || []
+    ...mapMutations({
+      setErrors: 'form/setErrors',
+      clearErrors: 'form/clearErrors'
+    }),
+    reset() {
+      this.form = {
+        name: '',
+        email: '',
+        type: 'personal',
+        requestLimit: '',
+        address: '',
+        city: '',
+        zip: '',
+        phone: '',
+        message: ''
+      }
     },
     async onSubmit() {
       this.pending = true
 
       try {
-        const { message } = await this.$contactApi.sendContact({
+        const { message } = await this.$submissionApi.contact({
           ...this.form,
           gRecaptchaResponse: await this.$recaptcha.execute('contact')
         })
@@ -231,6 +242,8 @@ export default {
           message
         }
 
+        this.clearErrors()
+        this.reset()
         this.pending = false
       } catch (e) {
         if (e instanceof Response) {
@@ -242,7 +255,7 @@ export default {
             message: json.message
           }
 
-          this.errors = json.errors
+          this.setErrors(json.errors)
         }
         this.pending = false
       }
@@ -250,13 +263,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-button[type='submit']:disabled {
-  @apply opacity-50 cursor-not-allowed;
-
-  &:hover {
-    @apply no-underline;
-  }
-}
-</style>

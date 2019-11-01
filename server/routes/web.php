@@ -61,6 +61,7 @@ Route::group(['prefix' => config('app.admin_path')], function () {
              */
             Route::apiResource('posts', 'PostController');
             Route::apiResource('tags', 'TagController');
+            Route::apiResource('submissions', 'SubmissionController', ['only' => ['index', 'show', 'destroy']]);
         });
 
         /*

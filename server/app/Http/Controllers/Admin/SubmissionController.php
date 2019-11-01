@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Post;
+use App\Models\Submission;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\PostStoreRequest;
-use App\Http\Requests\PostUpdateRequest;
 
-class PostController extends Controller
+class SubmissionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -23,24 +21,14 @@ class PostController extends Controller
      */
     public function index(Request $request)
     {
-        return datatables(Post::whereType($request->get('type')))
+        return datatables(Submission::whereType($request->get('type')))
             ->columns([
                 'id',
-                'user_id',
-                'title',
-                'type',
-                'status',
-                'is_pinned',
-                'slug',
-                'publication_date',
+                'data',
                 'created_at',
-                'updated_at',
             ])
             ->searchables([
-                'title',
-                'summary',
-                'body',
-                'user.name',
+                'data',
             ])
             ->perform();
     }
@@ -48,69 +36,27 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param \App\Models\Post $post
+     * @param \App\Models\Submission $submission
      *
-     * @return Post
+     * @return Submission
      */
-    public function show(Post $post)
+    public function show(Submission $submission)
     {
-        return $post;
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param PostStoreRequest $request
-     *
-     * @throws \Exception
-     *
-     * @return array
-     */
-    public function store(PostStoreRequest $request)
-    {
-        /** @var Post $post */
-        $post = Post::create($request->all());
-        $post->syncTagsWithType($request->input('tags') ?: []);
-
-        return [
-            'model'   => $post,
-            'message' => __('crud.actions.created'),
-        ];
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param \App\Models\Post  $post
-     * @param PostUpdateRequest $request
-     *
-     * @throws \Exception
-     *
-     * @return array
-     */
-    public function update(Post $post, PostUpdateRequest $request)
-    {
-        $post->update($request->except('type'));
-        $post->syncTagsWithType($request->input('tags') ?: []);
-
-        return [
-            'model'   => $post,
-            'message' => __('crud.actions.updated'),
-        ];
+        return $submission;
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param \App\Models\Post $post
+     * @param \App\Models\Submission $submission
      *
      * @throws \Exception
      *
      * @return array
      */
-    public function destroy(Post $post)
+    public function destroy(Submission $submission)
     {
-        $post->delete();
+        $submission->delete();
 
         return [
             'message' => __('crud.actions.deleted'),

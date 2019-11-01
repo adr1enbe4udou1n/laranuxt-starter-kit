@@ -7,6 +7,7 @@ You've got a new message :
 * Email : {{ $email }}
 * Type : {{ $type }}
 * Request limit : {{ $request_limit }}
+* Address : {{ $address }}
 * City : {{ $city }}
 * Postcode : {{ $zip }}
 * Phone : {{ $phone }}

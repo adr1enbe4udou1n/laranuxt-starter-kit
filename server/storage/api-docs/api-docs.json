@@ -11,99 +11,6 @@
         }
     ],
     "paths": {
-        "/contact/send": {
-            "post": {
-                "tags": [
-                    "contact"
-                ],
-                "summary": "Store submission",
-                "description": "Store submission",
-                "operationId": "sendContact",
-                "requestBody": {
-                    "description": "Submission data",
-                    "required": true,
-                    "content": {
-                        "application/x-www-form-urlencoded": {
-                            "schema": {
-                                "required": [
-                                    "name",
-                                    "email",
-                                    "type",
-                                    "request_limit",
-                                    "message"
-                                ],
-                                "properties": {
-                                    "name": {
-                                        "description": "Nom",
-                                        "type": "string"
-                                    },
-                                    "email": {
-                                        "description": "Email",
-                                        "type": "string"
-                                    },
-                                    "type": {
-                                        "description": "Type",
-                                        "type": "string",
-                                        "enum": [
-                                            "personal",
-                                            "business"
-                                        ]
-                                    },
-                                    "request_limit": {
-                                        "description": "Request limit",
-                                        "type": "string",
-                                        "enum": [
-                                            "1000",
-                                            "5000",
-                                            "10000",
-                                            "25000"
-                                        ]
-                                    },
-                                    "city": {
-                                        "description": "City",
-                                        "type": "string"
-                                    },
-                                    "zip": {
-                                        "description": "Zip",
-                                        "type": "string"
-                                    },
-                                    "phone": {
-                                        "description": "Phone",
-                                        "type": "string"
-                                    },
-                                    "message": {
-                                        "description": "Message",
-                                        "type": "string"
-                                    },
-                                    "g-recaptcha-response": {
-                                        "description": "Message",
-                                        "type": "string"
-                                    }
-                                },
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "200": {
-                        "description": "successful operation",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "properties": {
-                                        "message": {
-                                            "type": "string"
-                                        }
-                                    },
-                                    "type": "object"
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
         "/enums": {
             "get": {
                 "tags": [
@@ -253,6 +160,103 @@
                             "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/Post"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/submission/contact": {
+            "post": {
+                "tags": [
+                    "submission"
+                ],
+                "summary": "Store contact submission",
+                "description": "Store contact submission",
+                "operationId": "contact",
+                "requestBody": {
+                    "description": "Submission data",
+                    "required": true,
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "required": [
+                                    "name",
+                                    "email",
+                                    "type",
+                                    "request_limit",
+                                    "message"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "description": "Nom",
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "description": "Email",
+                                        "type": "string"
+                                    },
+                                    "type": {
+                                        "description": "Type",
+                                        "type": "string",
+                                        "enum": [
+                                            "personal",
+                                            "business"
+                                        ]
+                                    },
+                                    "request_limit": {
+                                        "description": "Request limit",
+                                        "type": "string",
+                                        "enum": [
+                                            "1000",
+                                            "5000",
+                                            "10000",
+                                            "25000"
+                                        ]
+                                    },
+                                    "address": {
+                                        "description": "Address",
+                                        "type": "string"
+                                    },
+                                    "city": {
+                                        "description": "City",
+                                        "type": "string"
+                                    },
+                                    "zip": {
+                                        "description": "Zip",
+                                        "type": "string"
+                                    },
+                                    "phone": {
+                                        "description": "Phone",
+                                        "type": "string"
+                                    },
+                                    "message": {
+                                        "description": "Message",
+                                        "type": "string"
+                                    },
+                                    "g-recaptcha-response": {
+                                        "description": "Message",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
                                 }
                             }
                         }

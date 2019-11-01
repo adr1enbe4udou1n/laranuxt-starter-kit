@@ -26,6 +26,10 @@ export default {
       index: 'Liste des étiquettes',
       create: 'Ajouter une étiquette',
       edit: "Edition de l'étiquette {title}"
+    },
+    submissions: {
+      main: 'Gestion des soumissions',
+      index: 'Liste des soumissions'
     }
   },
   navs: {
@@ -38,6 +42,7 @@ export default {
     blog: 'Blog',
     posts: 'Articles',
     tags: 'Etiquettes',
+    submissions: 'Soumissions',
     users: 'Utilisateurs'
   },
   alerts: {
@@ -135,6 +140,7 @@ export default {
     type: 'Type',
     slug: 'Slug',
     date: 'Date',
-    description: 'Description'
+    description: 'Description',
+    data: 'Données'
   }
 }

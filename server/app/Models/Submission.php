@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
  * App\Models\Submission.
  *
  * @property int                             $id
+ * @property string                          $type
  * @property mixed                           $data
  * @property \Illuminate\Support\Carbon|null $created_at
  *
@@ -20,7 +21,7 @@ class Submission extends Model
 {
     const UPDATED_AT = null;
 
-    protected $fillable = ['data'];
+    protected $fillable = ['type', 'data'];
 
     protected $casts = [
         'data' => 'array',

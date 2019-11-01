@@ -1,5 +1,5 @@
 import { Plugin } from '@nuxt/types'
-import { CmsApi, ContactApi, Configuration } from '~/openapi/src'
+import { CmsApi, SubmissionApi, Configuration } from '~/openapi/src'
 
 declare global {
   namespace NodeJS {
@@ -12,21 +12,21 @@ declare global {
 declare module 'vue/types/vue' {
   interface Vue {
     $cmsApi: CmsApi,
-    $contactApi: ContactApi
+    $submissionApi: SubmissionApi
   }
 }
 
 declare module '@nuxt/types' {
   interface NuxtAppOptions {
     $cmsApi: CmsApi,
-    $contactApi: ContactApi
+    $submissionApi: SubmissionApi
   }
 }
 
 declare module 'vuex/types/index' {
   interface Store<S> {
     $cmsApi: CmsApi,
-    $contactApi: ContactApi
+    $submissionApi: SubmissionApi
   }
 }
 
@@ -38,9 +38,9 @@ const api: Plugin = (context, inject) => {
     config = new Configuration({ fetchApi: fetch, basePath })
   }
   const cmsApi = new CmsApi(config)
-  const contactApi = new ContactApi(config)
+  const submissionApi = new SubmissionApi(config)
   inject('cmsApi', cmsApi)
-  inject('contactApi', contactApi)
+  inject('submissionApi', submissionApi)
 }
 
 export default api

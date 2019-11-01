@@ -5,7 +5,6 @@
         <h3 class="card-title">{{ $route.meta.label }}</h3>
       </template>
       <Datatable
-        ref="datatable"
         model-route="posts"
         model-name="post"
         :fields="fields"

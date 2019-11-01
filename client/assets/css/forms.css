@@ -1,0 +1,11 @@
+.form-input.invalid, .form-select.invalid {
+  @apply border-red-500;
+}
+
+button[type='submit']:disabled {
+  @apply opacity-50 cursor-not-allowed;
+
+  &:hover {
+    @apply no-underline;
+  }
+}

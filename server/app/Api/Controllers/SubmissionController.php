@@ -7,15 +7,15 @@ use App\Models\Submission;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
-class ContactController extends ApiController
+class SubmissionController extends ApiController
 {
     /**
      * @OA\Post(
-     *     path="/contact/send",
-     *     tags={"contact"},
-     *     operationId="sendContact",
-     *     summary="Store submission",
-     *     description="Store submission",
+     *     path="/submission/contact",
+     *     tags={"submission"},
+     *     operationId="contact",
+     *     summary="Store contact submission",
+     *     description="Store contact submission",
      *     @OA\RequestBody(
      *         required=true,
      *         description="Submission data",
@@ -98,7 +98,7 @@ class ContactController extends ApiController
      *
      * @return array
      */
-    public function send(Request $request)
+    public function contact(Request $request)
     {
         $validated = $this->validate($request, [
             'name'                 => 'required',
@@ -113,7 +113,7 @@ class ContactController extends ApiController
             'g-recaptcha-response' => 'required|recaptcha',
         ]);
 
-        Submission::create(['data' => $validated]);
+        Submission::create(['type' => 'contact', 'data' => $request->except('g-recaptcha-response')]);
         Mail::send(new SendContact($validated));
 
         return [

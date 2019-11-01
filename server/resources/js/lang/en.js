@@ -8,6 +8,28 @@ export default {
       index: 'Users list',
       create: 'Create new user',
       edit: 'Edit user {name}'
+    },
+    pages: {
+      main: 'Pages management',
+      index: 'Pages list',
+      create: 'Create new page',
+      edit: 'Edit page {title}'
+    },
+    posts: {
+      main: 'Posts management',
+      index: 'Posts list',
+      create: 'Create new post',
+      edit: 'Edit post {title}'
+    },
+    tags: {
+      main: 'Tags management',
+      index: 'Tags list',
+      create: 'Create new tag',
+      edit: 'Edit tag {title}'
+    },
+    submissions: {
+      main: 'Submissions management',
+      index: 'Submissions list'
     }
   },
   navs: {
@@ -15,6 +37,12 @@ export default {
     profile: 'Edit my profile',
     logout: 'Logout',
     access_management: 'Access management',
+    content_management: 'Content management',
+    pages: 'Pages',
+    blog: 'Blog',
+    posts: 'Posts',
+    tags: 'Tags',
+    submissions: 'Submissions',
     users: 'Users'
   },
   alerts: {
@@ -29,14 +57,21 @@ export default {
     no_results: 'No result',
     no_matched_results: 'No matched result',
     search: 'Search',
+    search_user: 'Search user',
     export: 'Export',
     are_you_sure: 'Are you sure ?',
     yes: 'Yes',
     no: 'No',
+    none: 'None',
+    view: 'Show',
+    of: 'of',
+    add_tags: 'Add new tag',
+    filters: 'Filters',
     datatables: {
-      show_per_page: 'Show',
-      entries_per_page: 'entries per page',
-      infos: 'Showing {offset_start} to {offset_end} of {total} entries'
+      rows_per_page: 'Entries per page',
+      selected: '{count} selected item(s)',
+      all_selected: 'All selected filtred items',
+      bulkDelete: 'Delete all selected items'
     },
     delete: 'Delete',
     file_link: 'File link',
@@ -51,14 +86,22 @@ export default {
   buttons: {
     show: 'Show',
     create: 'Create',
+    update: 'Update',
     edit: 'Edit',
     delete: 'Delete',
+    schedule: 'Schedule',
+    publish: 'Publish',
+    draft: 'Save as draft',
     close: 'Close',
     back: 'Back',
     cancel: 'Cancel',
     validate: 'Validate',
     confirm: 'Confirm',
-    add: 'Add'
+    add: 'Add',
+    move_up: 'Move up',
+    move_down: 'Move down',
+    associate: 'Associate',
+    dissociate: 'Dissociate'
   },
   exceptions: {
     unauthorized: 'Unauthorized action',
@@ -67,16 +110,36 @@ export default {
     validation_errors: 'Validation error, check fields'
   },
   attributes: {
+    user: 'User',
     name: 'Name',
+    first_name: 'First name',
+    last_name: 'Last name',
     email: 'Email',
     active: 'Active',
     password: 'Password',
     old_password: 'Old password',
+    new_password: 'New password',
     password_confirmation: 'Confirm password',
     new_password_confirmation: 'Confirm new password',
     roles: 'Roles',
     created_at: 'Creation date',
     updated_at: 'Modification date',
-    last_access_at: 'Last access date'
+    last_access_at: 'Last access date',
+    order_column: 'Position',
+    posts_count: 'Posts count',
+    image: 'Image',
+    title: 'Title',
+    status: 'Status',
+    is_pinned: 'Pinned',
+    author: 'Author',
+    publication_date: 'Publication date',
+    tags: 'Tags',
+    summary: 'Summary',
+    body: 'Body',
+    type: 'Type',
+    slug: 'Slug',
+    date: 'Date',
+    description: 'Description',
+    data: 'Data'
   }
 }

@@ -42,6 +42,14 @@ export function createNav(router, i18n) {
       url: '/posts',
       children
     })
+
+    if (router.canAccess({ name: 'submissions' })) {
+      navs.push({
+        name: i18n.t('navs.submissions'),
+        url: '/submissions',
+        icon: 'fas fa-list'
+      })
+    }
   }
 
   if (router.canAccess({ name: 'users' })) {

@@ -114,6 +114,7 @@ return [
     'uuid'              => 'The :attribute must be a valid UUID.',
     'mismatch_password' => 'The :attribute field does not match with your current password.',
     'strong_password'   => 'Your password must contain lowercase/uppercase letters, and at least one digit and one symbol.',
+    'wrong_recaptcha'   => 'Invalid recaptcha, please retry.',
 
     /*
     |--------------------------------------------------------------------------
