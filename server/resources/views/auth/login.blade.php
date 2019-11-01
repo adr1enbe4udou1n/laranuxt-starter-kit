@@ -9,7 +9,7 @@
                     @csrf
                     <div class="card-body p-6">
                         <div class="card-title">
-                            <img src="{{ asset('img/brand/logo.svg') }}" alt="{{ config('app.name') }}" class="img-fluid">
+                            <img src="{{ asset('brand/logo.svg') }}" alt="{{ config('app.name') }}" class="img-fluid">
                         </div>
                         <div class="form-group">
                             <label class="form-label" for="email">{{ __('E-Mail Address') }}</label>
