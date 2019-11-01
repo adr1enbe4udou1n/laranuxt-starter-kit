@@ -38,7 +38,7 @@
         <span>&copy; {{ new Date().getFullYear() }} {{ $app.name }}.</span>
       </div>
       <div class="ml-auto">
-        <i class="fe fe-code"></i> with <i class="fe fe-heart"></i> by <a href="https://www.useweb.fr">Useweb</a>
+        <i class="fe fe-code"></i> with <i class="fe fe-heart"></i> by <a href="https://www.useweb.fr">My Company</a>
       </div>
     </TheFooter>
   </div>
