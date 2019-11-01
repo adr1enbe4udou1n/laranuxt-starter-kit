@@ -47,6 +47,11 @@ class ContactController extends ApiController
      *                     enum={"1000", "5000", "10000", "25000"}
      *                 ),
      *                 @OA\Property(
+     *                     property="address",
+     *                     type="string",
+     *                     description="Address"
+     *                 ),
+     *                 @OA\Property(
      *                     property="city",
      *                     type="string",
      *                     description="City"
@@ -100,6 +105,7 @@ class ContactController extends ApiController
             'email'                => 'required|email',
             'type'                 => 'required|in:personal,business',
             'request_limit'        => 'required|in:1000,5000,10000,25000',
+            'address'              => 'nullable',
             'city'                 => 'nullable',
             'zip'                  => 'nullable',
             'phone'                => 'nullable',
