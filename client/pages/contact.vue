@@ -229,3 +229,13 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+button[type='submit']:disabled {
+  @apply opacity-50 cursor-not-allowed;
+
+  &:hover {
+    @apply no-underline;
+  }
+}
+</style>
