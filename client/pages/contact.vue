@@ -9,7 +9,7 @@
           <alert
             v-if="alert"
             :type="alert.type"
-            title="Validation du formulaire"
+            :title="alert.title"
             :message="alert.message"
           ></alert>
 
@@ -18,9 +18,20 @@
             <input
               v-model="form.name"
               class="form-input mt-1 block w-full"
+              :class="{ 'border-red-500': hasError('name') }"
               placeholder="Jane Doe"
-              required
             />
+            <ol
+              v-if="hasError('name')"
+              class="text-red-500 text-xs italic mt-3"
+            >
+              <li
+                v-for="(message, index) in errorMessages('name')"
+                :key="index"
+              >
+                {{ message }}
+              </li>
+            </ol>
           </label>
 
           <label class="block mt-4">
@@ -29,7 +40,6 @@
               v-model="form.email"
               class="form-input mt-1 block w-full"
               placeholder="jane.doe@example.com"
-              required
             />
           </label>
 
@@ -64,7 +74,6 @@
             <select
               v-model="form.requestLimit"
               class="form-select mt-1 block w-full"
-              required
             >
               <option value="">Select limit</option>
               <option value="1000">$1,000</option>
@@ -123,13 +132,12 @@
               class="form-input mt-1 block w-full"
               placeholder="Message"
               :rows="5"
-              required
             />
           </label>
 
           <div class="flex mt-4">
             <label class="flex items-center">
-              <input type="checkbox" class="form-checkbox" required />
+              <input type="checkbox" class="form-checkbox" />
               <span class="ml-2"
                 >I agree to the
                 <nuxt-link to="/privacy"
@@ -196,11 +204,18 @@ export default {
         phone: '',
         message: ''
       },
+      errors: {},
       alert: null,
       pending: false
     }
   },
   methods: {
+    hasError(name) {
+      return this.errors.hasOwnProperty(name)
+    },
+    errorMessages(name) {
+      return this.errors[name] || []
+    },
     async onSubmit() {
       this.pending = true
 
@@ -212,16 +227,22 @@ export default {
 
         this.alert = {
           type: 'success',
+          title: 'Success',
           message
         }
 
         this.pending = false
       } catch (e) {
         if (e instanceof Response) {
+          const json = await e.json()
+
           this.alert = {
             type: 'error',
-            message: e.json().message
+            title: 'Failed',
+            message: json.message
           }
+
+          this.errors = json.errors
         }
         this.pending = false
       }
