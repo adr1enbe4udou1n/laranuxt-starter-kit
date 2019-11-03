@@ -46,7 +46,7 @@ class ReadOnly
         // Super admin has no limitation
         $user = auth()->user();
 
-        if ($user && $user->is_super_admin) {
+        if ($user && $user->is_owner) {
             return false;
         }
 

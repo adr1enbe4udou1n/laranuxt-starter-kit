@@ -3,7 +3,6 @@
 namespace App\Exceptions;
 
 use Exception;
-use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
@@ -52,13 +51,6 @@ class Handler extends ExceptionHandler
                     'message' => $exception->getMessage(),
                 ], 400);
             }
-        }
-
-        /*
-         * Si authentification JWT via l'api, forcer une réponse JSON au lieu du redirect par défaut.
-         */
-        if (($exception instanceof AuthenticationException) && in_array('api', $exception->guards(), true)) {
-            return response()->json(['error' => 'Unauthorized'], 401);
         }
 
         return parent::render($request, $exception);
