@@ -70,6 +70,11 @@ class User extends Authenticatable implements BulkActions
         'active',
     ];
 
+    protected $appends = [
+        'is_owner',
+        'is_admin',
+    ];
+
     public function getIsOwnerAttribute()
     {
         return 1 === $this->id;

@@ -146,6 +146,6 @@ class UserController extends Controller
 
         app(UserImpersonnation::class)->impersonate($user);
 
-        return redirect('/');
+        return redirect(config('app.admin_path'));
     }
 }

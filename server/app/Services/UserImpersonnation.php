@@ -33,9 +33,7 @@ class UserImpersonnation
     }
 
     /**
-     * Déconnexion avec gestion de l'impersonnation.
-     *
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     * Logout impersonation.
      */
     public function logout()
     {
@@ -46,7 +44,7 @@ class UserImpersonnation
 
             auth()->loginUsingId((int) $admin_user_id);
 
-            return redirect(config('app.admin_path'));
+            return;
         }
 
         auth()->logout();
