@@ -13,7 +13,7 @@
     @encoreEntryLinkTags('js/app')
 
     <!-- Scripts -->
-    <script src="//cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+    <script src="//cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
     <script>
         CKEDITOR.plugins.addExternal('autogrow', '/ckeditor/plugins/autogrow/', 'plugin.js')
         CKEDITOR.plugins.addExternal('image2', '/ckeditor/plugins/image2/', 'plugin.js')
