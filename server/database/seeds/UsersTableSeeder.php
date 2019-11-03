@@ -22,6 +22,15 @@ class UsersTableSeeder extends Seeder
         ]);
 
         /*
+         * Admins
+         */
+        factory(User::class)->create([
+            'name'  => 'Admin',
+            'email' => 'admin@example.com',
+            'roles' => ['admin'],
+        ]);
+
+        /*
          * Editors
          */
         for ($i = 1; $i <= 5; $i++) {
