@@ -4,7 +4,8 @@ import { CmsApi, SubmissionApi, Configuration } from '~/openapi/src'
 declare global {
   namespace NodeJS {
     interface Global {
-      FormData: any
+      FormData: any,
+      URLSearchParams: any
     }
   }
 }
@@ -35,6 +36,7 @@ const api: Plugin = (context, inject) => {
   let config = new Configuration({ basePath, headers: { Accept: 'application/json' } })
   if (process.server) {
     global.FormData = require('form-data')
+    global.URLSearchParams = require('url').URLSearchParams
     config = new Configuration({ fetchApi: fetch, basePath })
   }
   const cmsApi = new CmsApi(config)
