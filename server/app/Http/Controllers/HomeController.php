@@ -16,6 +16,7 @@ class HomeController extends Controller
     public function index()
     {
         $data = [
+            'locale'           => app()->getLocale(),
             'name'             => config('app.name'),
             'admin_path'       => config('app.admin_path'),
             'user'             => auth()->user(),

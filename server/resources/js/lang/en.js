@@ -81,7 +81,8 @@ export default {
     locales: {
       french: 'French',
       english: 'English'
-    }
+    },
+    publication: 'Publication'
   },
   buttons: {
     show: 'Show',
@@ -128,6 +129,7 @@ export default {
     order_column: 'Position',
     posts_count: 'Posts count',
     image: 'Image',
+    featured_image: 'Featured image',
     title: 'Title',
     status: 'Status',
     is_pinned: 'Pinned',

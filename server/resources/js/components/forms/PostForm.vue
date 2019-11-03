@@ -36,7 +36,7 @@
             <b-card-header header-tag="header" role="tab">
               <h5 class="card-title">
                 <a href="javascript:void(0)" v-b-toggle.collapseOne>
-                  Publication
+                  {{ $t('labels.publication') }}
                 </a>
               </h5>
             </b-card-header>
@@ -48,7 +48,7 @@
                     <b-badge :variant="model.status_badge">{{ model.status_label }}</b-badge>
                   </label>
                 </b-form-group>
-                <FormGroup :label="$t('attributes.author')" label-for="user">
+                <FormGroup :label="$t('attributes.author')" label-for="user" v-if="$store.state.user.is_admin">
                   <Autocomplete
                     name="user"
                     v-model="model.user_id"
@@ -61,8 +61,6 @@
                 <FormGroup
                   :label="$t('attributes.publication_date')"
                   label-for="publication-date"
-                  description="Si aucune date n'est indiquée, c'est la date au moment de la publication qui sera prise en compte.
-      Vous pouvez également indiquer une date postérieure afin de planifier la publication."
                 >
                   <DateTimePicker name="publication_date" v-model="model.publication_date"></DateTimePicker>
                 </FormGroup>
@@ -95,7 +93,7 @@
             <b-card-header header-tag="header" role="tab">
               <h5 class="card-title">
                 <a href="javascript:void(0)" v-b-toggle.collapseImage>
-                  Image principale
+                  {{ $t('attributes.featured_image') }}
                 </a>
               </h5>
             </b-card-header>
@@ -108,7 +106,6 @@
                   v-model="model.featured_image_file"
                   :file-url="model.featured_image"
                   :delete.sync="model.featured_image_delete"
-                  description="Fichier au format JPG ou PNG."
                 ></ImageType>
               </b-card-body>
             </b-collapse>
@@ -117,7 +114,7 @@
             <b-card-header header-tag="header" role="tab">
               <h5 class="card-title">
                 <a href="javascript:void(0)" v-b-toggle.collapseTags>
-                  Etiquettes
+                  {{ $t('attributes.tags') }}
                 </a>
               </h5>
             </b-card-header>

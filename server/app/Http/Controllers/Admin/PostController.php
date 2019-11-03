@@ -23,7 +23,13 @@ class PostController extends Controller
      */
     public function index(Request $request)
     {
-        return datatables(Post::whereType($request->get('type')))
+        $query = Post::whereType($request->get('type'));
+
+        if ($request->user()->hasRole('author')) {
+            $query->whereUserId($request->user()->id);
+        }
+
+        return datatables($query)
             ->columns([
                 'id',
                 'user_id',

@@ -29,6 +29,7 @@ export default {
   data() {
     return {
       config: {
+        language: this.$app.locale,
         extraPlugins: ['autogrow', 'image2', 'embedbase', 'embed', 'horizontalrule'],
         removePlugins: ['elementspath', 'image', 'resize'],
         toolbar: [

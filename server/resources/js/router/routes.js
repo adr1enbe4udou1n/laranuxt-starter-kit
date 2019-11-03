@@ -36,7 +36,7 @@ export function createRoutes(i18n) {
         },
         createCrudRoutes(i18n, 'users', { titleAttribute: 'name', roles: ['admin'] }),
         createCrudRoutes(i18n, 'pages', { directory: 'content', showRoute: 'posts.show', roles: ['admin', 'editor'] }),
-        createCrudRoutes(i18n, 'posts', { directory: 'content', roles: ['admin', 'editor'] }),
+        createCrudRoutes(i18n, 'posts', { directory: 'content', roles: ['admin', 'editor', 'author'] }),
         createCrudRoutes(i18n, 'submissions', { directory: 'content', roles: ['admin', 'editor'] }),
         createCrudRoutes(i18n, 'tags', {
           directory: 'content',
