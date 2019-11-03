@@ -8,6 +8,7 @@ class ReadOnly
 {
     private $except = [
         '*/login',
+        '*/logout',
     ];
 
     /**
