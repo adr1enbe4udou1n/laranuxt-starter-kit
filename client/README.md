@@ -30,7 +30,7 @@
 ### Linters & code styling
 
 * [Vue ESLint Plugin](https://github.com/vuejs/eslint-plugin-vue),
-* [Prettier](https://github.com/prettier/prettier) for opinionated code formatter.
+* [Prettier](https://github.com/prettier/prettier) as opinionated code formatter.
 
 ### Dev notes
 
