@@ -58,8 +58,8 @@
 
 * [PHP-CS-Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) for automatically fix PHP CS issues,
 * [Webpack Encore](https://github.com/symfony/webpack-encore) for assets building,
-* [Vue ESLint Plugin](https://github.com/vuejs/eslint-plugin-vue)
-* [Prettier](https://github.com/prettier/prettier) for opinionated code formatter.
+* [Vue ESLint Plugin](https://github.com/vuejs/eslint-plugin-vue) for vue templates linting,
+* [Prettier](https://github.com/prettier/prettier) as opinionated code formatter.
 
 ## [Build Setup](#setup)
 
