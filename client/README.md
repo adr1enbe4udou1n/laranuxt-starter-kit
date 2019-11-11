@@ -43,7 +43,7 @@
 
 ## [Build Setup](#build-setup)
 
-* You should [prepare API server first](../server#build-setup) because it is required to generate client api code, which is not included on this repo.
+* You should [prepare API server first](../server#build-setup) because it is required to generate api client code, which is not included on this repo.
 * Here we suppose that you use http://localhost:8000 as backend base URL.
 * If you're not interested on backend setup, just directly use the [demo API Spec JSON](https://laranuxt.okami101.io/docs/api-docs.json).
 * You also need to have Java >= 8 runtime installed to generate API client code !
