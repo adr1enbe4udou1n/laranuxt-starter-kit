@@ -53,13 +53,8 @@ export default {
     // Doc: https://github.com/nuxt-community/pwa-module
     ['@nuxtjs/pwa', { icon: false }],
     // Doc: https://github.com/nuxt/typescript
-    '@nuxt/typescript-build'
-  ],
-  /*
-   ** Nuxt.js modules
-   */
-  modules: [
-    '@nuxtjs/dotenv',
+    '@nuxt/typescript-build',
+    // Doc: https://github.com/nuxt-community/recaptcha-module
     [
       '@nuxtjs/recaptcha',
       {
@@ -69,6 +64,10 @@ export default {
       }
     ]
   ],
+  /*
+   ** Nuxt.js modules
+   */
+  modules: ['@nuxtjs/dotenv'],
   /*
    ** Build configuration
    */
