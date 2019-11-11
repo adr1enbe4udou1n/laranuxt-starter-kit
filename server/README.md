@@ -81,7 +81,7 @@ $ composer install
 # generate key
 $ php artisan key:generate
 
-# set storage link symlink
+# set storage symlink
 $ php artisan storage:link
 
 # publish elfinder assets
