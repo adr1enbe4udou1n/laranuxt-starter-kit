@@ -14,7 +14,7 @@
 
 # LaraNuxt
 
-> Minimal Blogger Starter Kit build with Nuxt as Frontend and Laravel as Backend API.
+> Minimal Web Starter Kit based on Nuxt as Frontend and Laravel as Backend API.
 
 * Frontend demo : https://laranuxt.okami101.io
 * Swagger API documentation : https://laranuxt.okami101.io/api/documentation
