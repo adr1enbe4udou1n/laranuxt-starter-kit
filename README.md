@@ -23,5 +23,5 @@
 
 ## [Deploy](#deploy)
 
-* Use this [Nginx config](deploy/nginx.conf) as template
-* Use this [Git Post-Merge](deploy/post-merge.sh) as Git Hooks for autobuilding client & server on each pull
+* Use this [Nginx config](nginx.conf) as template
+* Use this [Git Post-Merge](post-merge.sh) as Git Hooks for autobuilding client & server on each pull
