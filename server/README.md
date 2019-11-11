@@ -14,15 +14,17 @@
 
 # Laravel API Starter Kit
 
-> Server-side API Starter Kit used for data consumption (see client sample [here](../client)). It includes a full custom SPA admin based on Vue CoreUI (Bootstrap 4).
+> Server-side API Starter Kit used for data consumption (see client sample implementation [here](../client)). It includes a full custom SPA admin based on Vue CoreUI (Bootstrap 4).
 
 ## Features
 
-* User and roles management,
+* SPA admin,
+* User management,
 * Impersonation feature,
 * Submissions management,
-* Posts and pages management for frontend blog,
-* Rich seeders content.
+* Mini-cms (posts and pages),
+* Rich seeders content,
+* Swagger UI for API documentation, usable for code generation ([see client sample](../client)).
 
 ### Laravel
 

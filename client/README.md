@@ -17,7 +17,7 @@
 
 # Nuxt Starter Kit
 
-> Client-side Starter Kit used for consomming blog API Backend (see server sample [here](../server)). Frontend is fully based on Tailwind CSS and includes OpenAPI generator tool for quick API generation code based on OpenAPI Specification (Swagger).
+> Client-side Starter Kit used for consomming this [OpenAPI Specification](https://laranuxt.okami101.io/api/documentation) (see server sample implementation [here](../server)). Frontend is fully based on Tailwind CSS and includes OpenAPI generator tool for quick API generation code based on OpenAPI Specification (Swagger).
 
 ## Features
 
