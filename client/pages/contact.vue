@@ -232,8 +232,8 @@ export default {
 
       try {
         const { message } = await this.$submissionApi.contact({
-          ...this.form
-          // gRecaptchaResponse: await this.$recaptcha.execute('contact')
+          ...this.form,
+          gRecaptchaResponse: await this.$recaptcha.execute('contact')
         })
 
         this.alert = {
