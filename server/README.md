@@ -45,7 +45,7 @@
 * [Spatie Fractal](https://github.com/spatie/laravel-fractal) for specific api data transform,
 * [Swagger UI](https://github.com/darkaonline/l5-swagger) for api documentation generation.
 
-### BO
+### Admin
 
 * Full SPA based on [Vue CoreUI](https://github.com/coreui/coreui-free-vue-admin-template) and [Bootstrap-Vue](https://bootstrap-vue.js.org) template,
 * Many useful plugins ([SweetAlert2](https://limonte.github.io/sweetalert2/), [Flatpickr](https://chmln.github.io/flatpickr/), CKEditor 4, etc.),
