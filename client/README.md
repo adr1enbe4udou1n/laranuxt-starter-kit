@@ -43,8 +43,9 @@
 
 ## [Build Setup](#build-setup)
 
-> You need to prepare API Backend before because you'll need to generate api code. Here we suppose as you use http://localhost:8000 as backend base URL.
-> You also need to have Java 8 runtime installed to generate API client code !
+* You need to prepare API Backend before because you'll need to generate api code. Here we suppose as you use http://localhost:8000 as backend base URL.
+* You also need to have Java 8 runtime installed to generate API client code !
+* By default this generated code is git-ignored, simply remove "openapi" on .gitignore if you prefer to keep it on your repo.
 
 ``` bash
 # install dependencies
