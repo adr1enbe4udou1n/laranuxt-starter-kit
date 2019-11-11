@@ -50,7 +50,7 @@
 * Full SPA based on [Vue CoreUI](https://github.com/coreui/coreui-free-vue-admin-template) and [Bootstrap-Vue](https://bootstrap-vue.js.org) template,
 * Many useful plugins ([SweetAlert2](https://limonte.github.io/sweetalert2/), [Flatpickr](https://chmln.github.io/flatpickr/), CKEditor 4, etc.),
 * Excel Export (thanks to [Maatwebsite](https://github.com/Maatwebsite/Laravel-Excel)) & Batch actions integrated within DataTables,
-* [CKeditor 4](https://ckeditor.com/ckeditor-4/) configured only with the mostly common used features (autogrow, embed, horizontalrule, image2 plugins)
+* [CKeditor 4](https://ckeditor.com/ckeditor-4/) configured only with the mostly common used features (autogrow, embed, horizontalrule, image2 plugins),
 * [Elfinder](barryvdh/laravel-elfinder) for files management, integrated within Ckeditor 4,
 * [Ziggy](https://github.com/tightenco/ziggy) for client-side route naming.
 
