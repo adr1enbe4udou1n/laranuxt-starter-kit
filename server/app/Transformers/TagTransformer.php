@@ -4,6 +4,7 @@ namespace App\Transformers;
 
 use App\Models\Tag;
 use League\Fractal;
+use OpenApi\Annotations as OA;
 
 /**
  * @OA\Schema(schema="Tag")

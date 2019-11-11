@@ -4,6 +4,7 @@ namespace App\Api\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use OpenApi\Annotations as OA;
 use App\Transformers\PostTransformer;
 use App\Transformers\PostCollectionTransformer;
 

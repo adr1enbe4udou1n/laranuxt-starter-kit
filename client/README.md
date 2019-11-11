@@ -67,7 +67,8 @@ $ yarn dev
 
 ### I don't want use this shitty java openapi thing
 
-It's just a show-case automatised way to generate api client code. You're of course free to use directly [Axios Module](https://github.com/nuxt-community/axios-module) in place of it.
+It's just a show-case automatised way to generate api client code. The main drawback is that Swagger documentation must be perfectly manually written on server-side in order to fully comply with all of your backend features.  
+If fou don't support this you're of course free to use directly [Axios module](https://github.com/nuxt-community/axios-module) in place of it and avoid swagger docs headaches for code generation ;)
 
 ## License
 

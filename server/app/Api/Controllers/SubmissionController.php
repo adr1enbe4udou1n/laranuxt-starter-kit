@@ -5,6 +5,7 @@ namespace App\Api\Controllers;
 use App\Mail\SendContact;
 use App\Models\Submission;
 use Illuminate\Http\Request;
+use OpenApi\Annotations as OA;
 use Illuminate\Support\Facades\Mail;
 
 class SubmissionController extends ApiController

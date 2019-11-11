@@ -3,6 +3,7 @@
 namespace App\Api\Controllers;
 
 use App\Utils\EnumUtils;
+use OpenApi\Annotations as OA;
 
 class EnumController extends ApiController
 {

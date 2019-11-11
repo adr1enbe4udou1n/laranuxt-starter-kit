@@ -100,6 +100,7 @@ $ php artisan serve
 
 # API Swagger documentation can be accessed and tested at http://localhost:8000/api/documentation
 # Look at samples on dedicated API controllers (app/Api/Controllers) for enpoints and transformers (app/Transformers) for models in order to know how to build it
+# PHP Annotations for PHPStorm is heavily recommended for Swagger docs autocompletion
 ```
 
 BO UI building :

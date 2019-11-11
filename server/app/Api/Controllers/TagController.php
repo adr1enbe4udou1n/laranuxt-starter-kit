@@ -3,6 +3,7 @@
 namespace App\Api\Controllers;
 
 use App\Models\Tag;
+use OpenApi\Annotations as OA;
 use App\Transformers\TagTransformer;
 
 class TagController extends ApiController

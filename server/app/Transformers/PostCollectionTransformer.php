@@ -4,6 +4,7 @@ namespace App\Transformers;
 
 use League\Fractal;
 use App\Models\Post;
+use OpenApi\Annotations as OA;
 use Coduo\PHPHumanizer\StringHumanizer;
 
 /**

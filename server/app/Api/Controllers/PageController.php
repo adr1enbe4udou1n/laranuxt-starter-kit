@@ -3,6 +3,7 @@
 namespace App\Api\Controllers;
 
 use App\Models\Post;
+use OpenApi\Annotations as OA;
 use App\Transformers\PageTransformer;
 use App\Transformers\PageCollectionTransformer;
 
