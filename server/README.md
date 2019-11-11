@@ -70,7 +70,7 @@
 
 ### For Local/Development
 
-Server Backend :
+#### API Server
 
 ``` bash
 # install dependencies
@@ -98,7 +98,7 @@ $ php artisan serve
 # PHP Annotations for PHPStorm is heavily recommended for Swagger docs autocompletion
 ```
 
-Admin UI building :
+#### Admin UI
 
 ``` bash
 # install dependencies
