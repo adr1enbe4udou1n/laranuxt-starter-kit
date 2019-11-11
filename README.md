@@ -2,7 +2,7 @@
 <a href="https://nuxtjs.org/" target="_blank">
 <img align="center" height="120" src="https://fr.nuxtjs.org/logos/nuxt.svg"/>
 </a>
-<img align="center" style="height:60px; margin: 0 30px 0 15px" src="https://image.flaticon.com/icons/svg/148/148836.svg"/>
+<img align="center" height="60" style="margin: 0 30px 0 15px" src="https://image.flaticon.com/icons/svg/148/148836.svg"/>
 <a href="https://laravel.com/" target="_blank">
 <img align="center" height="120" src="https://cdn.worldvectorlogo.com/logos/laravel-2.svg"/></p>
 </a>
