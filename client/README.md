@@ -25,6 +25,7 @@
 * Simple base pages content (about us, legal notice, etc.),
 * Blog section with tags navigation and pagination support,
 * Contact form with [Recaptcha module](https://github.com/nuxt-community/recaptcha-module).
+* PWA Ready with [PWA module](https://github.com/nuxt-community/pwa-module)
 
 ### Linters & code styling
 
