@@ -45,13 +45,14 @@
 
 * You should [prepare API server first](../server#build-setup) because it is required to generate api client code, which is not included on this repo.
 * Here we suppose that you use http://localhost:8000 as backend base URL.
-* If you're not interested on backend setup, just directly use the [demo API Spec JSON](https://laranuxt.okami101.io/docs/api-docs.json).
 * You also need to have Java >= 8 runtime installed to generate API client code !
 * If you prefer to keep the generated code on your repo, simply remove "openapi" on .gitignore.
 
 ``` bash
 # install dependencies
 $ yarn
+
+# copy .env.example & configure environnement variables
 
 # get the backend api swagger json spec URL at http://localhost:8000/api/documentation and launch openapi tool generator
 $ yarn openapi http://localhost:8000/docs/api-docs.json
@@ -63,6 +64,13 @@ $ yarn dev
 ### Deploy
 
 > [See global README](../../../#deploy)
+
+## FAQ
+
+### I just want to build Frontend part
+
+* If you're not interested on API backend setup, just directly use `yarn openapi https://laranuxt.okami101.io/docs/api-docs.json` instead of local version.
+* Use API_URL=http://laranuxt.okami101.io and MEDIA_CACHE_URL=http://laranuxt.okami101.io/media/cache on your .env file.
 
 ### I don't want use this shitty java openapi thing
 
