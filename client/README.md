@@ -17,7 +17,7 @@
 
 # Nuxt Starter Kit
 
-> Client-side Starter Kit used for consomming this [OpenAPI Specification](https://laranuxt.okami101.io/api/documentation) (see server sample implementation [here](../server)), fully based on Tailwind CSS and with inclusion of API client code generator.
+> Client-side Starter Kit used for consomming this [OpenAPI Specification](https://laranuxt.okami101.io/api/documentation) (see server sample implementation [here](../server)), fully based on Tailwind CSS and with inclusion of typescripted API client code generator.
 
 ## Features
 
