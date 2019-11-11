@@ -92,13 +92,17 @@ $ php artisan migrate [--seed]
 
 # start dev server at localhost:8000
 $ php artisan serve
-
-# API Swagger documentation can be accessed and tested at http://localhost:8000/api/documentation
-# Look at samples on dedicated API controllers (app/Api/Controllers) for enpoints and transformers (app/Transformers) for models in order to know how to build it
-# PHP Annotations for PHPStorm is heavily recommended for Swagger docs autocompletion
 ```
 
-#### Admin UI
+#### API documentation building
+
+* API Swagger documentation can be accessed and tested at http://localhost:8000/api/documentation.
+* Look at "OA\\*" PHP annotations on API controllers (app/Api/Controllers) for enpoints and transformers (app/Transformers) for models in order to know how to build documentation.
+* PHP Annotations for PHPStorm is heavily recommended for Swagger docs autocompletion.
+* Use "L5_SWAGGER_GENERATE_ALWAYS=true" environnement variable (on local only) to autogenerate api docs.
+* If error on Swagger UI, use `php artisan l5-swagger:generate` to get traces.
+
+#### Admin UI building
 
 ``` bash
 # install dependencies
