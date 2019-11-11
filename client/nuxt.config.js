@@ -49,7 +49,7 @@ export default {
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
     // Doc: https://github.com/nuxt-community/router-module
-    '@nuxtjs/router',
+    ['@nuxtjs/router', { keepDefaultRouter: true }],
     // Doc: https://github.com/nuxt-community/pwa-module
     ['@nuxtjs/pwa', { icon: false }],
     // Doc: https://github.com/nuxt/typescript

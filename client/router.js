@@ -9,9 +9,11 @@ import Contact from '~/pages/contact'
 
 Vue.use(Router)
 
-export function createRouter() {
+export function createRouter(ssrContext, createDefaultRouter, routerOptions) {
+  const options = routerOptions || createDefaultRouter(ssrContext).options
+
   return new Router({
-    mode: 'history',
+    ...options,
     routes: [
       {
         path: '/',
