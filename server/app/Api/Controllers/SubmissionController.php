@@ -110,7 +110,7 @@ class SubmissionController extends ApiController
             'zip'                  => 'nullable',
             'phone'                => 'nullable',
             'message'              => 'required',
-            'g-recaptcha-response' => 'required|recaptcha',
+            //'g-recaptcha-response' => 'required|recaptcha',
         ]);
 
         Submission::create(['type' => 'contact', 'data' => $request->except('g-recaptcha-response')]);
