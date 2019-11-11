@@ -14,7 +14,7 @@
 
 # Laravel API Starter Kit
 
-> Server-side API Starter Kit used for data consumption (see client sample [here](../client/README.md)). It includes a full custom SPA BO based on Vue CoreUI (Bootstrap 4).
+> Server-side API Starter Kit used for data consumption (see client sample [here](../client). It includes a full custom SPA BO based on Vue CoreUI (Bootstrap 4).
 
 ## Features
 
