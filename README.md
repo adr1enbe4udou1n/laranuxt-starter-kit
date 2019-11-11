@@ -18,10 +18,15 @@
 
 ## [Build Setup](#setup)
 
-* Backend : [See dedicated README](client)
-* Client : [See dedicated README](server)
+* Server : [See dedicated README](server)
+* Client : [See dedicated README](client)
 
 ## [Deploy](#deploy)
 
-* Use this [Nginx config](nginx.conf) as template
-* Use this [Git Post-Merge](post-merge.sh) as Git Hooks for autobuilding client & server on each pull
+* Use [PM2](https://pm2.keymetrics.io/) to launch Nuxt server node on specific port. Example you can use this command `pm2 start npm --name "laranuxt" -- start -- --port 3000`,
+* Use this [Git post-merge hook](post-merge.sh) for server & client building automation on each pull,
+* Use this [Nginx template](nginx.conf).
+
+## License
+
+This project is open-sourced software licensed under the [MIT license](https://adr1enbe4udou1n.mit-license.org).
