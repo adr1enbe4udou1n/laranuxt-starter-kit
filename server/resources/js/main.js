@@ -74,7 +74,7 @@ export function createApp() {
   Vue.prototype.$confirm = (action = i18n.t('buttons.delete')) =>
     swal.fire({
       title: i18n.t('labels.are_you_sure'),
-      type: 'warning',
+      icon: 'warning',
       focusCancel: true,
       showCancelButton: true,
       cancelButtonText: i18n.t('buttons.cancel'),
