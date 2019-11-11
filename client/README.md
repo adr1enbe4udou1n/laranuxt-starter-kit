@@ -15,7 +15,7 @@
 <img align="center" height="120" src="https://cdn.freebiesupply.com/logos/large/2x/prettier-2-logo-png-transparent.png"/></a>
 </p>
 
-# Laravel API Starter Kit
+# Nuxt Starter Kit
 
 > Client-side Starter Kit used for consomming blog API Backend (see server sample [here](../server/README.md). Frontend is fully based on Tailwind CSS and includes OpenAPI generator tool for quick API generation code based on OpenAPI Specification (Swagger).
 
