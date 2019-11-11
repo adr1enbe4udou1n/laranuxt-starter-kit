@@ -61,7 +61,7 @@
 * [Vue ESLint Plugin](https://github.com/vuejs/eslint-plugin-vue) for vue templates linting,
 * [Prettier](https://github.com/prettier/prettier) as opinionated code formatter.
 
-## [Build Setup](#setup)
+## [Build Setup](#build-setup)
 
 ### Requirements
 

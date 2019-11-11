@@ -41,7 +41,7 @@
   * Vue components and pages stay classic vue components. No awful Typescript things. Note as this can be change on the next Vue 3 which will have true Typescript support thanks to the new API composition syntax !
   * API available endpoints can be 100% autocompleted (with GET and POST parameters) even inside the asyncData method !
 
-## [Build Setup](#setup)
+## [Build Setup](#build-setup)
 
 > You need to prepare API Backend before because you'll need to generate api code. Here we suppose as you use http://localhost:8000 as backend base URL.
 > You also need to have Java 8 runtime installed to generate API client code !

@@ -20,15 +20,15 @@
 * Swagger API documentation : https://laranuxt.okami101.io/api/documentation
 * Admin UI demo : https://laranuxt.okami101.io/admin (admin@example.com/password, read-only)
 
-## [Main features](features)
+## [Main features](#main-features)
 
 * [Nuxt starter kit](client) is based on [Tailwind CSS](https://tailwindcss.com/) for lightning fast frontend building,
 * [Laravel starter kit](server) includes full custom SPA admin based on [Vue CoreUI](https://github.com/coreui/coreui-free-vue-admin-template).
 
-## [Build Setup](#setup)
+## [Build Setup](#build-setup)
 
-* Server : [See dedicated README](server#setup)
-* Client : [See dedicated README](client#setup)
+* Server : [See dedicated README](server#build-setup)
+* Client : [See dedicated README](client#build-setup)
 
 ## [Deploy](#deploy)
 
