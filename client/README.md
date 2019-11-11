@@ -2,16 +2,20 @@
 <a href="https://nuxtjs.org/" target="_blank">
 <img align="center" height="120" src="https://fr.nuxtjs.org/logos/nuxt.svg"/>
 </a>
-<a href="https://tailwindcss.com/" target="_blank" style="margin-left:30px">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://tailwindcss.com/" target="_blank">
 <img align="center" height="80" src="https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png"/>
 </a>
-<a href="https://openapi-generator.tech/" target="_blank" style="margin-left:30px">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://openapi-generator.tech/" target="_blank">
 <img align="center" height="120" src="https://openapi-generator.tech/img/color-logo.svg"/>
 </a>
-<a href="https://www.typescriptlang.org/" target="_blank" style="margin-left:30px">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://www.typescriptlang.org/" target="_blank">
 <img align="center" height="120" src="https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png"/>
 </a>
-<a href="https://prettier.io/" target="_blank" style="margin-left:30px">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://prettier.io/" target="_blank">
 <img align="center" height="120" src="https://cdn.freebiesupply.com/logos/large/2x/prettier-2-logo-png-transparent.png"/>
 </a>
 </p>
