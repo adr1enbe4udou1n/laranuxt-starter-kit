@@ -43,9 +43,11 @@
 
 ## [Build Setup](#build-setup)
 
-* You need to prepare API Backend before because you'll need to generate api code. Here we suppose as you use http://localhost:8000 as backend base URL.
-* You also need to have Java 8 runtime installed to generate API client code !
-* By default this generated code is git-ignored, simply remove "openapi" on .gitignore if you prefer to keep it on your repo.
+* You should [prepare API server first](../server#build-setup) because it is required to generate api code, which is not included on this repo.
+* Here we suppose that you use http://localhost:8000 as backend base URL.
+* If you're not interested on backend setup, just directly use the [demo API Spec JSON](https://laranuxt.okami101.io/docs/api-docs.json).
+* You also need to have Java >= 8 runtime installed to generate API client code !
+* If you prefer to keep the generated code on your repo, simply remove "openapi" on .gitignore.
 
 ``` bash
 # install dependencies
