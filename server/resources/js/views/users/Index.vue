@@ -13,6 +13,7 @@
         :row-actions="actions"
         @on-row-action="onRowAction"
         :row-action-predicate="rowActionPredicate"
+        :can-export="true"
       >
         <template slot="actions">
           <b-btn to="/users/create" variant="success" size="sm"> {{ $t('titles.users.create') }} </b-btn>

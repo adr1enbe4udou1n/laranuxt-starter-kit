@@ -1,22 +1,25 @@
-# nuxt-tailwind
+<p align="center">
+<a href="https://nuxtjs.org/" target="_blank">
+<img align="center" height="120" src="https://fr.nuxtjs.org/logos/nuxt.svg"/>
+</a>
+<img align="center" style="height:60px; margin: 0 30px 0 15px" src="https://image.flaticon.com/icons/svg/148/148836.svg"/>
+<a href="https://laravel.com/" target="_blank">
+<img align="center" height="120" src="https://cdn.worldvectorlogo.com/logos/laravel-2.svg"/></p>
+</a>
 
-> My luminous Nuxt.js project
+# LaraNuxt
+
+> Minimal Blogger Starter Kit build with Nuxt as Frontend and Laravel as Backend API.
+
+* Frontend demo : https://laranuxt.okami101.io
+* Backend demo : https://laranuxt.okami101.io/admin (admin@example.com/password, read-only)
 
 ## Build Setup
 
-``` bash
-# install dependencies
-$ yarn install
+* Backend : [See dedicated README](client/README.md)
+* Client : [See dedicated README](server/README.md)
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+## [Deploy](#deploy)
 
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+* Use this [Nginx config](deploy/nginx.conf) as template
+* Use this [Git Post-Merge](deploy/post-merge.sh) as Git Hooks for autobuilding client & server on each pull

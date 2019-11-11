@@ -1,72 +1,128 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
-
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+<a href="https://laravel.com/" target="_blank">
+<img align="center" height="120" src="https://cdn.worldvectorlogo.com/logos/laravel-2.svg"/>
+</a>
+<a href="https://swagger.io/" target="_blank" style="margin-left:30px">
+<img align="center" height="120" src="https://seeklogo.com/images/S/swagger-logo-A49F73BAF4-seeklogo.com.png"/>
+</a>
+<a href="https://coreui.io/vue/" target="_blank" style="margin-left:30px">
+<img align="center" height="140" src="https://avatars1.githubusercontent.com/u/36859861"/>
+</a>
+<a href="https://bootstrap-vue.js.org/" target="_blank" style="margin-left:30px">
+<img align="center" height="120" src="https://raw.githubusercontent.com/bootstrap-vue/bootstrap-vue/dev/static/logo.png">
+</a>
 </p>
 
-## About Laravel
+# Laravel API Starter Kit
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+> Server-side API Starter Kit used for data consumption (see client sample [here](../client/README.md)). It includes a full custom SPA BO based on Vue CoreUI (Bootstrap 4).
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* User and roles management,
+* Impersonation feature,
+* Submissions management,
+* Posts and pages management for frontend blog
+* Rich seeders content.
 
-## Learning Laravel
+### Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+* Based on the last [Laravel 6](https://laravel.com/),
+* [Spatie Image](https://github.com/spatie/image) for on-fly optimized images via proxy.
+* [Google Recaptcha](https://github.com/google/recaptcha) for server-side captcha.
+* [Clockwork](https://github.com/itsgoingd/clockwork) for easy api debugging.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Data
 
-## Laravel Sponsors
+* [Spatie Translatable](https://github.com/spatie/laravel-translatable) for model multilanguage support,
+* [Spatie Sortable](https://github.com/spatie/eloquent-sortable) for sortable model.
+* [Spatie Laravel Tags](https://github.com/spatie/laravel-tags) for tags model support.
+* [Spatie Enum](https://github.com/spatie/enum) for enums support.
+* [Spatie Medialibrary](https://github.com/spatie/laravel-medialibrary) for centralized media table management.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### API
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
+* [Laravel CORS](https://github.com/barryvdh/laravel-cors) for cors,
+* [Spatie Fractal](https://github.com/spatie/laravel-fractal) for specific api data transform,
+* [Swagger UI](https://github.com/darkaonline/l5-swagger) for api documentation generation.
 
-## Contributing
+### BO
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+* Full SPA based on [Vue CoreUI](https://github.com/coreui/coreui-free-vue-admin-template) and [Bootstrap-Vue](https://bootstrap-vue.js.org) template,
+* Many useful plugins ([SweetAlert2](https://limonte.github.io/sweetalert2/), [Flatpickr](https://chmln.github.io/flatpickr/), CKEditor 4, etc.),
+* Excel Export (thanks to [Maatwebsite](https://github.com/Maatwebsite/Laravel-Excel)) & Batch actions integrated within DataTables,
+* [CKeditor 4](https://ckeditor.com/ckeditor-4/) configured only with the mostly common used features (autogrow, embed, horizontalrule, image2 plugins)
+* [Elfinder](barryvdh/laravel-elfinder) for files management, integrated within Ckeditor 4,
+* [Ziggy](https://github.com/tightenco/ziggy) for client-side route naming.
 
-## Security Vulnerabilities
+### Assets building, linters & code styling
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+* [PHP-CS-Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) for automatically fix PHP CS issues,
+* [Webpack Encore](https://github.com/symfony/webpack-encore) for assets building,
+* [Vue ESLint Plugin](https://github.com/vuejs/eslint-plugin-vue)
+* [Prettier](https://github.com/prettier/prettier) for opinionated code formatter.
+
+## Build Setup
+
+### Requirements
+
+* PHP 7.3
+* MySQL 5.7 with JSON support or PostgreSQL
+
+### For Local/Development
+
+Server Backend :
+
+``` bash
+# install dependencies
+$ composer install
+
+# copy .env.example & configure environnement variables
+
+# generate key
+$ php artisan key:generate
+
+# set storage link symlink
+$ php artisan storage:link
+
+# publish elfinder assets
+$ php artisan elfinder:publish
+
+# migrate & seed data
+$ php artisan migrate [--seed]
+
+# start dev server at localhost:8000
+$ php artisan serve
+
+# API Swagger documentation can be accessed and tested at http://localhost:8000/api/documentation
+# Look at samples on dedicated API controllers (app/Api/Controllers) for enpoints and transformers (app/Transformers) for models in order to know how to build it
+```
+
+BO UI building :
+
+``` bash
+# install dependencies
+yarn
+
+# compiling BO assets with HMR support
+yarn dev-server --port 9000
+
+# BO is accessible by default at http://localhost:8000/admin, but path can be customized via APP_ADMIN_PATH environment variable
+```
+
+### Deploy
+
+> See [global README](../README.md#deploy)
+
+### Code styling
+
+PHP-CS-Fixer & ESLint+Prettier are used for style guidelines for both server and client side code.
+
+PHP is pre-configured for official Laravel styling, just launch `./vendor/bin/php-cs-fixer fix` for global project auto-formatting.
+
+JS use [Prettier Standard Style](https://github.com/prettier/prettier/) & eslint-loader is used within webpack for dynamic code styling recommendations.  
+Moreover, [Official ESLint plugin for Vue.js](https://github.com/vuejs/eslint-plugin-vue) is included for heavy consistent code through all components vue files.
 
 ## License
 
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is open-sourced software licensed under the [MIT license](https://adr1enbe4udou1n.mit-license.org).
