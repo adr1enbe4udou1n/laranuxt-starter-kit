@@ -32,7 +32,7 @@ export default {
         email: null,
         active: true,
         roles: [],
-        reset_password: false,
+        reset_password: false
       }
     }
   }

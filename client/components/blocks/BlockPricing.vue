@@ -16,8 +16,8 @@
         <div
           v-for="(price, i) in prices"
           :key="i"
-          class="price flex flex-col w-5/6 mx-auto lg:mx-0 bg-white mt-4"
           :class="{ active: price.recommended }"
+          class="price flex flex-col w-5/6 mx-auto lg:mx-0 bg-white mt-4"
         >
           <div
             class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"

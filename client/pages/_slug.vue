@@ -10,12 +10,12 @@
       <div class="container mx-auto py-6">
         <div class="mb-12">
           <image-cache
+            :src="post.featuredImage"
             class="block mb-6"
             size="lg"
-            :src="post.featuredImage"
           ></image-cache>
         </div>
-        <div class="wysiwyg-content" v-html="post.body"></div>
+        <div v-html="post.body" class="wysiwyg-content"></div>
       </div>
     </div>
 

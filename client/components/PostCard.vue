@@ -4,9 +4,9 @@
       <div class="h-64 overflow-hidden">
         <nuxt-link :to="{ name: 'post', params: { slug: post.slug } }">
           <image-cache
-            class="w-full h-full object-cover"
             :src="post.featuredImage"
             :alt="post.title"
+            class="w-full h-full object-cover"
           ></image-cache>
         </nuxt-link>
       </div>

@@ -5,7 +5,7 @@
     <div class="bg-white text-gray-700">
       <div class="container max-w-2xl mx-auto">
         <h1 class="text-2xl font-bold">Contact</h1>
-        <form class="border-b py-8" @submit.prevent="onSubmit">
+        <form @submit.prevent="onSubmit" class="border-b py-8">
           <alert
             v-if="alert"
             :type="alert.type"
@@ -124,9 +124,9 @@
             <textarea
               v-model="form.message"
               v-validate="'message'"
+              :rows="5"
               class="form-input mt-1 block w-full"
               placeholder="Message"
-              :rows="5"
             />
             <form-invalid-feedback name="message"></form-invalid-feedback>
           </label>
@@ -165,9 +165,9 @@
           </div>
 
           <button
+            :disabled="pending"
             type="submit"
             class="gradient text-white mx-auto lg:mx-0 hover:underline bg-white font-bold rounded-full my-6 py-4 px-8 shadow-lg"
-            :disabled="pending"
           >
             Submit
           </button>

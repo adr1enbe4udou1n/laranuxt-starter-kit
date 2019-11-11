@@ -1,7 +1,7 @@
 <template>
   <div
-    class="alert border-t-4 rounded-b px-4 py-3 shadow-md mb-4"
     :class="[type]"
+    class="alert border-t-4 rounded-b px-4 py-3 shadow-md mb-4"
     role="alert"
   >
     <div class="flex">

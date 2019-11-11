@@ -76,16 +76,16 @@ export default {
     nearFromBeginning() {
       return (
         !this.showAllPages &&
-        (this.currentPage < this.limit - 1 &&
-          this.limit > this.ellipsesThreshold)
+        this.currentPage < this.limit - 1 &&
+        this.limit > this.ellipsesThreshold
       )
     },
     nearFromEnd() {
       return (
         !this.showAllPages &&
         !this.nearFromBeginning &&
-        (this.pages - this.currentPage + 2 < this.limit &&
-          this.limit > this.ellipsesThreshold)
+        this.pages - this.currentPage + 2 < this.limit &&
+        this.limit > this.ellipsesThreshold
       )
     },
     isOnTheMiddle() {

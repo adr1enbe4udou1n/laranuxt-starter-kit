@@ -58,10 +58,7 @@
                   >
                   </Autocomplete>
                 </FormGroup>
-                <FormGroup
-                  :label="$t('attributes.publication_date')"
-                  label-for="publication-date"
-                >
+                <FormGroup :label="$t('attributes.publication_date')" label-for="publication-date">
                   <DateTimePicker name="publication_date" v-model="model.publication_date"></DateTimePicker>
                 </FormGroup>
 

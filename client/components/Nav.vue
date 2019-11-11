@@ -1,8 +1,8 @@
 <template>
   <nav
     id="header"
-    class="fixed w-full z-30 top-0 text-white"
     :class="{ 'nav-sticky': scrollY > 10 }"
+    class="fixed w-full z-30 top-0 text-white"
   >
     <div
       class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2"
@@ -21,8 +21,8 @@
       <div class="block lg:hidden pr-4">
         <button
           id="nav-toggle"
-          class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none"
           @click="openedNav = !openedNav"
+          class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none"
         >
           <toggle></toggle>
         </button>
@@ -30,14 +30,14 @@
 
       <div
         id="nav-content"
-        class="w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
         :class="{ hidden: !openedNav }"
+        class="w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
       >
         <ul class="list-reset lg:flex justify-end flex-1 items-center">
           <li v-for="(link, index) in links" :key="index" class="mr-3">
             <nuxt-link
-              class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
               :to="link.to"
+              class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
               >{{ link.title }}</nuxt-link
             >
           </li>
