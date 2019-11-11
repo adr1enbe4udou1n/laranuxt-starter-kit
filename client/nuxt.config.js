@@ -77,5 +77,11 @@ export default {
      */
     extend(config, ctx) {},
     extractCSS: process.env.NODE_ENV === 'production'
+  },
+  /*
+   ** PurgeCSS configuration
+   */
+  purgeCSS: {
+    whitelist: ['hidden']
   }
 }
