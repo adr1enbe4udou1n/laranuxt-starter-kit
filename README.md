@@ -18,8 +18,8 @@
 
 ## Build Setup
 
-* Backend : [See dedicated README](client/README.md)
-* Client : [See dedicated README](server/README.md)
+* Backend : [See dedicated README](client)
+* Client : [See dedicated README](server)
 
 ## [Deploy](#deploy)
 

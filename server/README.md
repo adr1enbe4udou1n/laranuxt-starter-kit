@@ -116,7 +116,7 @@ yarn dev-server --port 9000
 
 ### Deploy
 
-> See [global README](../README.md#deploy)
+> See [global README](../#deploy)
 
 ### Code styling
 
