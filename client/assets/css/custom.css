@@ -3,7 +3,6 @@
 }
 
 .wysiwyg-content {
-  @apply text-justify;
   & :first-child {
     @apply mt-0;
   }

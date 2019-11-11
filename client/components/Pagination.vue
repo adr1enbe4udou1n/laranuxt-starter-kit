@@ -57,7 +57,7 @@ export default {
     },
     limit: {
       type: Number,
-      default: 5
+      default: 4
     },
     linkGen: {
       type: Function,

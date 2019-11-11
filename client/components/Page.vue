@@ -17,7 +17,7 @@
       <!-- Change the colour #f8fafc to match the previous section colour -->
       <footer-waves></footer-waves>
 
-      <section class="container mx-auto text-center py-6 mb-12">
+      <section class="container text-center py-6 mb-12">
         <slot name="footer"></slot>
       </section>
     </template>

@@ -83,5 +83,10 @@ export default {
    */
   purgeCSS: {
     whitelist: ['hidden']
+  },
+  pwa: {
+    meta: {
+      theme_color: '#d53369'
+    }
   }
 }

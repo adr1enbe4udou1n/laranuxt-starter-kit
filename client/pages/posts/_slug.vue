@@ -1,7 +1,7 @@
 <template>
   <page>
     <div slot="hero">
-      <div class="container mx-auto py-20 text-center">
+      <div class="container py-20 text-center">
         <h1 class="text-center text-4xl uppercase mb-3">{{ post.title }}</h1>
         <small
           >Published at {{ post.publicationDate.toLocaleDateString() }}
@@ -10,7 +10,7 @@
     </div>
 
     <div class="bg-white text-gray-700">
-      <div class="container mx-auto py-6">
+      <div class="container py-6">
         <div class="mb-12">
           <image-cache
             :src="post.featuredImage"
