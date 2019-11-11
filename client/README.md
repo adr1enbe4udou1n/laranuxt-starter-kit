@@ -62,7 +62,7 @@ $ yarn dev
 
 ### Deploy
 
-> See [global README](../#deploy)
+> See [global README](/#deploy)
 
 ## License
 
