@@ -21,22 +21,22 @@
 * User and roles management,
 * Impersonation feature,
 * Submissions management,
-* Posts and pages management for frontend blog
+* Posts and pages management for frontend blog,
 * Rich seeders content.
 
 ### Laravel
 
 * Based on the last [Laravel 6](https://laravel.com/),
-* [Spatie Image](https://github.com/spatie/image) for on-fly optimized images via proxy.
-* [Google Recaptcha](https://github.com/google/recaptcha) for server-side captcha.
+* [Spatie Image](https://github.com/spatie/image) for on-fly optimized images via proxy,
+* [Google Recaptcha](https://github.com/google/recaptcha) for server-side captcha,
 * [Clockwork](https://github.com/itsgoingd/clockwork) for easy api debugging.
 
 ### Data
 
 * [Spatie Translatable](https://github.com/spatie/laravel-translatable) for model multilanguage support,
-* [Spatie Sortable](https://github.com/spatie/eloquent-sortable) for sortable model.
-* [Spatie Laravel Tags](https://github.com/spatie/laravel-tags) for tags model support.
-* [Spatie Enum](https://github.com/spatie/enum) for enums support.
+* [Spatie Sortable](https://github.com/spatie/eloquent-sortable) for sortable model,
+* [Spatie Laravel Tags](https://github.com/spatie/laravel-tags) for tags model support,
+* [Spatie Enum](https://github.com/spatie/enum) for enums support,
 * [Spatie Medialibrary](https://github.com/spatie/laravel-medialibrary) for centralized media table management.
 
 ### API

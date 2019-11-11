@@ -24,12 +24,12 @@
 * [Landing homepage](https://www.tailwindtoolbox.com/templates/landing-page) template fully based on [Tailwind CSS](https://tailwindcss.com/), a 100% CSS utility framework, perfect for fast frontend component oriented development,
 * Simple base pages content (about us, legal notice, etc.),
 * Blog section with tags navigation and pagination support,
-* Contact form with [Recaptcha module](https://github.com/nuxt-community/recaptcha-module).
-* PWA Ready with [PWA module](https://github.com/nuxt-community/pwa-module)
+* Contact form with [Recaptcha module](https://github.com/nuxt-community/recaptcha-module),
+* PWA Ready with [PWA module](https://github.com/nuxt-community/pwa-module).
 
 ### Linters & code styling
 
-* [Vue ESLint Plugin](https://github.com/vuejs/eslint-plugin-vue)
+* [Vue ESLint Plugin](https://github.com/vuejs/eslint-plugin-vue),
 * [Prettier](https://github.com/prettier/prettier) for opinionated code formatter.
 
 ### Dev notes
