@@ -70,7 +70,7 @@ $ yarn dev
 ### I just want to build Frontend part
 
 * If you're not interested on API backend setup, just directly use `yarn openapi https://laranuxt.okami101.io/docs/api-docs.json` instead of local version.
-* Use API_URL=http://laranuxt.okami101.io/api and MEDIA_CACHE_URL=http://laranuxt.okami101.io/media/cache on your .env file.
+* Use API_URL=https://laranuxt.okami101.io/api and MEDIA_CACHE_URL=https://laranuxt.okami101.io/media/cache on your .env file.
 
 ### I don't want use this shitty java openapi thing
 
