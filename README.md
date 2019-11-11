@@ -23,7 +23,7 @@
 ## [Main features](features)
 
 * [Nuxt starter kit](client) is based on [Tailwind CSS](https://tailwindcss.com/) for lightning fast frontend building,
-* [Laravel starter kit](server) includes full custom SPA BO based on [Vue CoreUI](https://github.com/coreui/coreui-free-vue-admin-template).
+* [Laravel starter kit](server) includes full custom SPA admin based on [Vue CoreUI](https://github.com/coreui/coreui-free-vue-admin-template).
 
 ## [Build Setup](#setup)
 

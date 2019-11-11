@@ -14,7 +14,7 @@
 
 # Laravel API Starter Kit
 
-> Server-side API Starter Kit used for data consumption (see client sample [here](../client). It includes a full custom SPA BO based on Vue CoreUI (Bootstrap 4).
+> Server-side API Starter Kit used for data consumption (see client sample [here](../client). It includes a full custom SPA admin based on Vue CoreUI (Bootstrap 4).
 
 ## Features
 
@@ -98,16 +98,16 @@ $ php artisan serve
 # PHP Annotations for PHPStorm is heavily recommended for Swagger docs autocompletion
 ```
 
-BO UI building :
+Admin UI building :
 
 ``` bash
 # install dependencies
 yarn
 
-# compiling BO assets with HMR support
+# compiling admin assets with HMR support
 yarn dev-server --port 9000
 
-# BO is accessible by default at http://localhost:8000/admin, but path can be customized via APP_ADMIN_PATH environment variable
+# Admin is accessible by default at http://localhost:8000/admin, but path can be customized via APP_ADMIN_PATH environment variable
 ```
 
 ### Deploy
