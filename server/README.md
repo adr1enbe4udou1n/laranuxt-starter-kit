@@ -33,15 +33,15 @@
 
 ### Data
 
-* [Spatie Translatable](https://github.com/spatie/laravel-translatable) for model multilanguage support,
+* [Spatie Translatable](https://github.com/spatie/laravel-translatable) for multilanguage model support,
 * [Spatie Sortable](https://github.com/spatie/eloquent-sortable) for sortable model,
-* [Spatie Laravel Tags](https://github.com/spatie/laravel-tags) for tags model support,
+* [Spatie Laravel Tags](https://github.com/spatie/laravel-tags) for dedicated tag model,
 * [Spatie Enum](https://github.com/spatie/enum) for enums support,
 * [Spatie Medialibrary](https://github.com/spatie/laravel-medialibrary) for centralized media table management.
 
 ### API
 
-* [Laravel CORS](https://github.com/barryvdh/laravel-cors) for cors,
+* [Laravel CORS](https://github.com/barryvdh/laravel-cors) for cross-origin resource sharing,
 * [Spatie Fractal](https://github.com/spatie/laravel-fractal) for specific api data transform,
 * [Swagger UI](https://github.com/darkaonline/l5-swagger) for api documentation generation.
 
