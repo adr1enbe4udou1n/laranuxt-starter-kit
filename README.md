@@ -16,7 +16,7 @@
 * Frontend demo : https://laranuxt.okami101.io
 * Backend demo : https://laranuxt.okami101.io/admin (admin@example.com/password, read-only)
 
-## Build Setup
+## [Build Setup](#setup)
 
 * Backend : [See dedicated README](client)
 * Client : [See dedicated README](server)
