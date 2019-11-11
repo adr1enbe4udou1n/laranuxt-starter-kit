@@ -1,20 +1,15 @@
 <p align="center">
 <a href="https://laravel.com/" target="_blank">
-<img align="center" height="120" src="https://cdn.worldvectorlogo.com/logos/laravel-2.svg"/>
-</a>
+<img align="center" height="120" src="https://cdn.worldvectorlogo.com/logos/laravel-2.svg"/></a>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="https://swagger.io/" target="_blank">
-<img align="center" height="120" src="https://seeklogo.com/images/S/swagger-logo-A49F73BAF4-seeklogo.com.png"/>
-</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img align="center" height="120" src="https://seeklogo.com/images/S/swagger-logo-A49F73BAF4-seeklogo.com.png"/></a>
+&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="https://coreui.io/vue/" target="_blank">
-<img align="center" height="140" src="https://avatars1.githubusercontent.com/u/36859861"/>
-</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img align="center" height="140" src="https://avatars1.githubusercontent.com/u/36859861"/></a>
+&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="https://bootstrap-vue.js.org/" target="_blank">
-<img align="center" height="120" src="https://raw.githubusercontent.com/bootstrap-vue/bootstrap-vue/dev/static/logo.png">
-</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img align="center" height="120" src="https://raw.githubusercontent.com/bootstrap-vue/bootstrap-vue/dev/static/logo.png"></a>
 </p>
 
 # Laravel API Starter Kit
