@@ -110,9 +110,9 @@ yarn
 
 # compiling admin assets with HMR support
 yarn dev-server --port 9000
-
-# Admin is accessible by default at http://localhost:8000/admin, but path can be customized via APP_ADMIN_PATH environment variable
 ```
+
+Admin is accessible by default at http://localhost:8000/admin, but path can be customized via APP_ADMIN_PATH environment variable.
 
 ### Deploy
 
