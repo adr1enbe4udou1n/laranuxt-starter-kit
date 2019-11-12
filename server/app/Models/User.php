@@ -6,7 +6,6 @@ use Illuminate\Support\Str;
 use App\Models\Traits\Bulkable;
 use App\Models\Traits\Toggleable;
 use Illuminate\Support\Facades\Hash;
-use App\Models\Contracts\BulkActions;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -36,7 +35,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User role($role)
  * @mixin \Eloquent
  */
-class User extends Authenticatable implements BulkActions
+class User extends Authenticatable
 {
     use Notifiable;
     use Bulkable;

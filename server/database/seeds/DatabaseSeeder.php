@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     }
 
     /**
-     * Récupérer le chemin d'un fichier média aléatoire.
+     * Generate random image path.
      *
      * @param Generator|\Faker\UniqueGenerator $faker
      * @param string                           $type
@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder
     }
 
     /**
-     * Générer un body riche.
+     * Generate rich body.
      *
      * @param Generator|\Faker\UniqueGenerator $faker
      *

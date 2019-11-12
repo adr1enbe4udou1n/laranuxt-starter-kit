@@ -30,8 +30,6 @@ trait HasTranslatableSlug
     }
 
     /**
-     * Filtrer par slug.
-     *
      * @param \Illuminate\Database\Eloquent\Builder $builder
      * @param $slug
      *

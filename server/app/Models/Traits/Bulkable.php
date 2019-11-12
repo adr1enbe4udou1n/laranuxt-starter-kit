@@ -43,9 +43,6 @@ trait Bulkable
         $builder = static::whereIn('id', $ids);
 
         if ('destroy' === $name) {
-            /*
-             * Suppression sur chaque modèle pour le support des event (suppression cascade ou tout autre traitement)
-             */
             return $builder->get()->each->delete();
         }
 

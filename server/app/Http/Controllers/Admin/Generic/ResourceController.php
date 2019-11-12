@@ -44,8 +44,6 @@ class ResourceController extends GenericController
     }
 
     /**
-     * Déplacement d'un élément.
-     *
      * @param string $model
      * @param $id
      * @param $direction

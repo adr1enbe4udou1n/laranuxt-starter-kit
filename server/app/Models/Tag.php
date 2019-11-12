@@ -36,8 +36,6 @@ class Tag extends \Spatie\Tags\Tag
     }
 
     /**
-     * Localiser le tri par type.
-     *
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function buildSortQuery()
@@ -49,9 +47,6 @@ class Tag extends \Spatie\Tags\Tag
     {
         $attributes = parent::toArray();
 
-        /*
-         * Appliquer les traductions du site dans sa langue par défaut
-         */
         foreach ($this->getTranslatableAttributes() as $name) {
             $attributes[$name] = $this->getTranslation($name, $this->getLocale());
         }

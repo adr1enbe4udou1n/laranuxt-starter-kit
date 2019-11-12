@@ -30,7 +30,6 @@ trait Publishable
     {
         static::saving(function (Model $model) {
             /** @var Publishable $model */
-            // Brouillon par defaut
             if (null === $model->status) {
                 $model->status = 'draft';
             }
@@ -39,21 +38,17 @@ trait Publishable
                 return;
             }
 
-            // S'assurer du bon état par rapport à la date de publication
             $now = Carbon::now();
 
-            // Mettre en état planifié si date postérieure
             if ($model->publication_date > $now) {
                 $model->status = 'scheduled';
 
                 return;
             }
 
-            // Sinon publié
             $model->status = 'published';
 
             if (! $model->publication_date) {
-                // Mettre la date du jour de publication si aucune date indiquée
                 $model->publication_date = $now;
             }
         });

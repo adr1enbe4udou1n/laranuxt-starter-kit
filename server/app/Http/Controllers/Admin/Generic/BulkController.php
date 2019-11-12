@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Admin\Generic;
 
 use Illuminate\Http\Request;
-use App\Models\Contracts\BulkActions;
 
 class BulkController extends GenericController
 {
@@ -19,7 +18,7 @@ class BulkController extends GenericController
         /** @var \App\Models\Traits\Bulkable $fullname */
         $fullname = $this->getModelClassName($model);
 
-        if (in_array(BulkActions::class, class_implements($fullname), true)) {
+        if (method_exists($fullname, 'bulkList')) {
             return $fullname::bulkList();
         }
 
@@ -27,8 +26,6 @@ class BulkController extends GenericController
     }
 
     /**
-     * Actions de modifications en lot.
-     *
      * @param string                   $model
      * @param string                   $action
      * @param \Illuminate\Http\Request $request

@@ -51,15 +51,10 @@ trait HasActivity
         $activity->action = $action;
         $activity->model()->associate($this);
 
-        /*
-         * En cas de modification/suppression, stocker les anciennes valeurs sérialisées en JSON
-         */
         if ('update' === $action) {
-            // Prendre le dernier état persisté de l'objet
             $activity->old_data = $this->fresh()->toJson();
         }
         if ('delete' === $action) {
-            // Prendre l'object en cours (déjà supprimé)
             $activity->old_data = $this->toJson();
         }
         $activity->save();

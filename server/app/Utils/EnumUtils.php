@@ -29,8 +29,6 @@ class EnumUtils
     }
 
     /**
-     * Retourne tous les enums.
-     *
      * @throws \ReflectionException
      *
      * @return array

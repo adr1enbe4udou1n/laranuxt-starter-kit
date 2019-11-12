@@ -200,7 +200,6 @@ class Post extends Model implements HasMedia
 
     public function scopeOrdered(Builder $builder)
     {
-        // Tri par défaut par articles épinglés puis date de publication
         return $builder
             ->orderByDesc('is_pinned')
             ->orderByDesc('publication_date');
@@ -215,16 +214,10 @@ class Post extends Model implements HasMedia
     {
         $attributes = parent::toArray();
 
-        /*
-         * Appliquer les traductions du site dans sa langue par défaut
-         */
         foreach ($this->getTranslatableAttributes() as $name) {
             $attributes[$name] = $this->getTranslation($name, $this->getLocale());
         }
 
-        /*
-         * Liste des tags
-         */
         $attributes['tags'] = $this->tagsWithType()->pluck('name');
 
         return $attributes;
