@@ -87,6 +87,10 @@ export default {
   pwa: {
     meta: {
       theme_color: '#d53369'
+    },
+    manifest: {
+      name: 'LaraNuxt',
+      short_name: 'LaraNuxt'
     }
   }
 }
