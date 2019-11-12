@@ -51,7 +51,7 @@ export default {
     // Doc: https://github.com/nuxt-community/router-module
     ['@nuxtjs/router', { keepDefaultRouter: true }],
     // Doc: https://github.com/nuxt-community/pwa-module
-    ['@nuxtjs/pwa', { icon: false }],
+    '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt/typescript
     '@nuxt/typescript-build',
     // Doc: https://github.com/nuxt-community/recaptcha-module
