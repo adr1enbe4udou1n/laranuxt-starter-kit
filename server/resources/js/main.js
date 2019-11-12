@@ -23,7 +23,7 @@ import App from './App'
 import axios from 'axios'
 import swal from 'sweetalert2'
 
-// Server-side Settings
+// Server-side settings
 let jsonSettings = document.querySelector('[data-settings-selector="settings-json"]')
 let settings = jsonSettings ? JSON.parse(jsonSettings.textContent) : {}
 
@@ -55,7 +55,9 @@ let applyProps = (source, target) => {
 
 Vue.prototype.$applyProps = applyProps
 
-// Vue plugins
+/**
+ * Vue plugins
+ */
 Vue.use(VueI18n)
 Vue.use(BootstrapVue)
 Vue.use(vClickOutside)
@@ -86,7 +88,7 @@ export function createApp() {
   const router = createRouter(settings, store, i18n)
 
   /**
-   * Chargement de VueJS
+   * Vue Init
    */
   const app = new Vue({
     router,
@@ -96,7 +98,7 @@ export function createApp() {
   })
 
   /**
-   * Chargement d'axios
+   * Axios
    */
   createAxios(app)
 

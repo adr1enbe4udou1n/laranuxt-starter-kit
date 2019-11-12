@@ -16,7 +16,7 @@ export function createRouter(app, store, i18n) {
   })
 
   /**
-   * Gestion des accès par route selon les rôles de l'utilisateur courant
+   * Client-side access control
    *
    * @param to
    * @returns {boolean|number}
@@ -29,10 +29,10 @@ export function createRouter(app, store, i18n) {
     }
     if (store.state.user) {
       if (store.state.user.id === 1) {
-        // Utilisateur super admin
+        // Super admin user
         return true
       }
-      // Intersaction des rôles pour vérifier l'accès
+      // Test roles access by intersect
       return roles.filter((role) => (store.state.user.roles || []).includes(role)).length
     }
     return false
