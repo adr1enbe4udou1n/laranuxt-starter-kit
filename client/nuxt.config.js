@@ -82,7 +82,7 @@ export default {
    ** PurgeCSS configuration
    */
   purgeCSS: {
-    whitelist: ['hidden']
+    whitelist: ['hidden', 'nuxt-link-active']
   },
   pwa: {
     meta: {
