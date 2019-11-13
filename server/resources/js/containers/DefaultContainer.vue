@@ -3,7 +3,7 @@
     <AppHeader fixed>
       <SidebarToggler class="d-lg-none" display="md" mobile></SidebarToggler>
       <b-link class="navbar-brand" to="/dashboard">
-        <img class="navbar-brand-full" src="/brand/logo.svg" width="150" height="33" alt="My Company" />
+        <img class="navbar-brand-full" src="/brand/logo.svg" width="140" height="40" alt="My Company" />
         <img class="navbar-brand-minimized" src="/brand/logo-mini.svg" width="40" height="40" alt="My Company" />
       </b-link>
       <SidebarToggler class="d-md-down-none" display="lg"></SidebarToggler>
