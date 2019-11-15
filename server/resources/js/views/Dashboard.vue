@@ -37,7 +37,7 @@ export default {
     return {
       publishedPosts: null,
       draftPosts: null,
-      users: null,
+      users: null
     }
   },
   created() {
