@@ -39,7 +39,7 @@
 * [Spatie Sortable](https://github.com/spatie/eloquent-sortable) for sortable model,
 * [Spatie Laravel Tags](https://github.com/spatie/laravel-tags) for dedicated tag model,
 * [Spatie Enum](https://github.com/spatie/enum) for enums support,
-* [Spatie Medialibrary](https://github.com/spatie/laravel-medialibrary) for centralized media table management.
+* [Spatie Medialibrary](https://github.com/spatie/laravel-medialibrary) for centralized media table management,
 * [Spatie Backup](https://github.com/spatie/laravel-backup) for quick backup/export.
 
 ### API
