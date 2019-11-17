@@ -1,11 +1,15 @@
 #!/bin/sh
 
 # SERVER
+php artisan config:clear
+php artisan cache:clear
+php artisan route:clear
+php artisan view:clear
+
 composer install
 php artisan migrate --force
 php artisan config:cache
 php artisan route:cache
-php artisan view:clear
 
 yarn
 yarn build
