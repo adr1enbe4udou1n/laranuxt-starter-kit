@@ -14,7 +14,7 @@ return [
                  * The list of directories and files that will be included in the backup.
                  */
                 'include' => [
-                    base_path(),
+                    storage_path('app/public/media'),
                 ],
 
                 /*
