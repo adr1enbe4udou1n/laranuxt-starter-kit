@@ -21,8 +21,8 @@
       <div class="block lg:hidden pr-4">
         <button
           id="nav-toggle"
-          @click="openedNav = !openedNav"
           class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none"
+          @click="openedNav = !openedNav"
         >
           <toggle></toggle>
         </button>

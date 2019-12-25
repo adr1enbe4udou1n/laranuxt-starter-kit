@@ -13,7 +13,7 @@ export const mutations = {
 
 export const getters = {
   hasErrors: (state) => (name) => {
-    return state.errors.hasOwnProperty(name)
+    return Object.prototype.hasOwnProperty.call(state.errors, name)
   },
   errorMessages: (state) => (name) => {
     return state.errors[name] || []

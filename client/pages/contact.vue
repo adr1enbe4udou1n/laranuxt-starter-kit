@@ -5,7 +5,7 @@
     <div class="bg-white text-gray-700">
       <div class="container max-w-2xl">
         <h1 class="text-2xl font-bold">Contact</h1>
-        <form @submit.prevent="onSubmit" class="border-b py-8">
+        <form class="border-b py-8" @submit.prevent="onSubmit">
           <alert
             v-if="alert"
             :type="alert.type"

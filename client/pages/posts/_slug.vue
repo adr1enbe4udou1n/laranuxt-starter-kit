@@ -25,7 +25,7 @@
             ># {{ tag.name }}</nuxt-link
           >
         </div>
-        <div v-html="post.body" class="wysiwyg-content"></div>
+        <div class="wysiwyg-content" v-html="post.body"></div>
       </div>
     </div>
 
