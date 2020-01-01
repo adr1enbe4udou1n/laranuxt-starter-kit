@@ -9,12 +9,12 @@
     ],
     "require": {
         "php": "^7.3",
-        "barryvdh/laravel-cors": "^0.11.3",
         "barryvdh/laravel-elfinder": "^0.4.2",
         "coduo/php-humanizer": "^3.0",
         "darkaonline/l5-swagger": "^6.0",
         "doctrine/dbal": "^2.8",
         "fideloper/proxy": "^4.0",
+        "fruitcake/laravel-cors": "^1.0",
         "google/recaptcha": "^1.2",
         "itsgoingd/clockwork": "^4.0",
         "laravel/framework": "^6.0",

@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "start": "nuxt-start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "openapi": "openapi-generator generate -g typescript-fetch -o openapi --additional-properties=typescriptThreePlus=true -i"
@@ -24,10 +24,11 @@
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/pwa": "^3.0.0-beta.19",
     "form-data": "^3.0.0",
-    "nuxt": "^2.11.0"
+    "nuxt-start": "^2.11.0",
+    "qs": "^6.9.1"
   },
   "devDependencies": {
-    "@nuxt/typescript-build": "^0.5.3",
+    "@nuxt/typescript-build": "^0.5.4",
     "@nuxtjs/eslint-config": "^2.0.0",
     "@nuxtjs/eslint-module": "^1.1.0",
     "@nuxtjs/recaptcha": "^0.6.1",
@@ -37,11 +38,12 @@
     "@tailwindcss/custom-forms": "^0.2.1",
     "babel-eslint": "^10.0.1",
     "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-nuxt": ">=0.5.0",
     "eslint-plugin-prettier": "^3.1.2",
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
+    "nuxt": "^2.11.0",
     "prettier": "^1.19.1",
     "vue-lazyload": "^1.3.3"
   }
