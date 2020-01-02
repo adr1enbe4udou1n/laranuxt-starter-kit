@@ -1,5 +1,5 @@
 import { Plugin } from '@nuxt/types'
-import { CmsApi, SubmissionApi, Configuration } from '~/openapi/src'
+import { CmsApi, SubmissionApi, Configuration } from '~/openapi'
 
 declare global {
   namespace NodeJS {
