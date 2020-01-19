@@ -28,11 +28,6 @@ export default {
       type: String,
       default: 'md',
       validator: (val) => ['ap', 'xs', 'sm', 'md', 'lg', 'xl'].includes(val)
-    },
-    method: {
-      type: String,
-      default: 'crop',
-      validator: (val) => ['max', 'crop'].includes(val)
     }
   },
   computed: {
@@ -48,8 +43,7 @@ export default {
     },
     imageCachePath() {
       return `/media/cache${this.src.replace(/^.*\/\/[^\/]+/, '')}?${qs.stringify({
-        method: this.method,
-        size: this.formattedSize
+        p: this.formattedSize
       })}`
     }
   }

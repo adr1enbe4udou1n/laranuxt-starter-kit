@@ -3,7 +3,7 @@
     v-lazy="imageCachePath"
     :alt="alt"
     :width="width"
-    :height="width"
+    :height="height"
     src="/blank.gif"
   />
 </template>
@@ -34,15 +34,6 @@ export default {
       type: String,
       default: 'md',
       validator: (val) => ['xs', 'sm', 'md', 'lg', 'xl'].includes(val)
-    },
-    method: {
-      type: String,
-      default: 'max',
-      validator: (val) => ['max', 'crop'].includes(val)
-    },
-    query: {
-      type: Object,
-      default: () => {}
     }
   },
   computed: {
@@ -60,9 +51,7 @@ export default {
         /^.*\/\/[^/]+/,
         ''
       )}?${qs.stringify({
-        method: this.method,
-        size: this.formattedSize,
-        ...this.query
+        p: this.formattedSize
       })}`
     }
   }

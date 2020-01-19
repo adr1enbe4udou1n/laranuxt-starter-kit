@@ -16,26 +16,31 @@ return [
 
     'driver' => env('IMAGE_DRIVER', 'gd'),
 
-    'thumbnails' => [
+    'presets' => [
         'admin_preview' => [
-            'width'  => 120,
-            'height' => 80,
+            'w'   => 120,
+            'h'   => 80,
+            'fit' => 'crop',
         ],
         'extra_small' => [
-            'width'  => 100,
-            'height' => 100,
+            'w'   => 100,
+            'h'   => 100,
+            'fit' => 'crop',
         ],
         'small' => [
-            'width'  => 400,
-            'height' => 400,
+            'w'   => 400,
+            'h'   => 400,
+            'fit' => 'crop',
         ],
         'medium' => [
-            'width'  => 800,
-            'height' => 800,
+            'w'   => 800,
+            'h'   => 800,
+            'fit' => 'crop',
         ],
         'large' => [
-            'width'  => 2000,
-            'height' => 1000,
+            'w'   => 2000,
+            'h'   => 1000,
+            'fit' => 'crop',
         ],
     ],
 ];
