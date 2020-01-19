@@ -167,10 +167,10 @@
                 }
             }
         },
-        "/submission/contact": {
+        "/submissions/contact": {
             "post": {
                 "tags": [
-                    "submission"
+                    "submissions"
                 ],
                 "summary": "Store contact submission",
                 "description": "Store contact submission",
@@ -505,6 +505,10 @@
         {
             "name": "enums",
             "description": "Enums"
+        },
+        {
+            "name": "submissions",
+            "description": "Submissions"
         }
     ]
 }

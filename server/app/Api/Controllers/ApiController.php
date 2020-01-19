@@ -59,6 +59,10 @@ use Illuminate\Support\Facades\Route;
  *     name="enums",
  *     description="Enums"
  * )
+ * @OA\Tag(
+ *     name="submissions",
+ *     description="Submissions"
+ * )
  */
 class ApiController extends Controller
 {

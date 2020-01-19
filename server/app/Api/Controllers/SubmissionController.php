@@ -12,8 +12,8 @@ class SubmissionController extends ApiController
 {
     /**
      * @OA\Post(
-     *     path="/submission/contact",
-     *     tags={"submission"},
+     *     path="/submissions/contact",
+     *     tags={"submissions"},
      *     operationId="contact",
      *     summary="Store contact submission",
      *     description="Store contact submission",
